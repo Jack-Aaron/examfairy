@@ -22,19 +22,16 @@ const App = () => {
   const endSession = () => setSession(false)
 
   return (
-    <Container className='App' fluid
-      style={{
-        display: session ? 'block' : 'none',
-        paddingTop: '30vh'
-      }}>
-      {questionsState !== undefined ?
-        <Question style={{ minWidth: '600px' }}
-          questionsState={questionsState}
-          setQuestionsState={setQuestionsState}
-          endSession={endSession}
-          shuffle={shuffle}
-        /> : null}
-    </Container>)
+    <div className='App'>
+      <Container className='questionCard'
+        style={{ display: session ? 'block' : 'none' }}>
+        {questionsState !== undefined ?
+          <Question questionsState={questionsState}
+            setQuestionsState={setQuestionsState}
+            endSession={endSession} shuffle={shuffle}
+          /> : null}
+      </Container>
+    </div>)
 };
 
 export default App

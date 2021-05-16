@@ -1,31 +1,17 @@
-import React, { useEffect, useState } from 'react';
-import { Transition } from 'react-transition-group';
-import AdvanceBtn from '../AdvanceBtn';
-import Button from 'react-bootstrap/Button';
+import React, { useState } from 'react';
 import Container from 'react-bootstrap/Container';
-import Card from 'react-bootstrap/Card';
-import Col from 'react-bootstrap/Col';
 import ListGroup from 'react-bootstrap/ListGroup';
+import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import Row from 'react-bootstrap/Row';
-import QUESTIONS from '../../questions';
+import Card from 'react-bootstrap/Card';
+import './style.css';
 
-const Question = ({ questionsState, setQuestionsState, endSession, shuffle }) => {
+const Question = ({ questionsState, setQuestionsState, endSession }) => {
 
   const [hintState, setHintState] = useState(false);
-
+  const toggleHint = () => setHintState(true)
   const [isHovering, setIsHovering] = useState(false);
-
-  const toggleIsHovering = () => {  // to notice the 'Hint' ?
-    setIsHovering(!isHovering)
-  }
-
-  const toggleHint = () => {
-    setHintState(true)
-  }
-
-  // const questionPreOrdinals = ['A)', 'B)', 'C)', 'D)'];
-
+  const toggleIsHovering = () => setIsHovering(!isHovering)
   const [radioState, setRadioState] = useState();
   const handleRadio = e => {
     let radioSelection = e.target.value;
@@ -34,23 +20,17 @@ const Question = ({ questionsState, setQuestionsState, endSession, shuffle }) =>
     }
     document.getElementById('answer' + radioSelection).style['background-color'] = '#EFFBFF';
     setRadioState(radioSelection);
-    setBtnDisabled(false);
-
+    setBtnDisabled(false)
   }
 
   const [btnDisabled, setBtnDisabled] = useState(true);
-
   const [wrongAnswer, setWrongAnswer] = useState(false);
-
-
   const answerQuestion = e => {
-
     e.preventDefault();
     e.stopPropagation();
     setHintState(false);
     setBtnDisabled(true);
     let radioSelection = radioState;
-
 
     if (questionsState[0].answers[radioSelection] === questionsState[0].correctAnswer && !wrongAnswer) {
       // CORRECT ANSWER
@@ -80,7 +60,6 @@ const Question = ({ questionsState, setQuestionsState, endSession, shuffle }) =>
       currentState[0].viewCt += 1;
       currentState.push(currentState.splice(0, 1)[0]);
     }
-
     else {
       // WRONG ANSWER (CANNOT ADVANCE)
       if (questionsState.length !== 1) {
@@ -94,36 +73,17 @@ const Question = ({ questionsState, setQuestionsState, endSession, shuffle }) =>
       if (currentScore > 0) {
         currentState[0].score -= 1
       }
-      // localStorage.setItem('latest_progress', JSON.stringify(currentState)); this doesnt make sense if the questions are being removed...
-
-      // logic about score, moving the card to the back of the stack, etc?
-
-
-
-
-      // let newQuestionSet = currentState.push(currentState.splice(0, 1)[0]);
-
-      // setQuestionsState(newQuestionSet)
     }
-    // logic about score, moving the card to the back of the stack, etc?
   }
 
   return (
     <div className='col-auto mb-3'>
-
-
-
       <Card
-
-        style={{ display: 'inline-flex', border: '4px dotted #9CFF19', minWidth: '50%', maxWidth: '50%', maxHeight: '50%', boxShadow: '4px 8px 14px rgb(113 137 255 / 55%)' }} className="text-center"
-
+        style={{ display: 'inline-flex', border: '4px dotted #9CFF19', boxShadow: '4px 8px 14px rgb(113 137 255 / 55%)' }} className="text-center"
       >
-        <Card.Header style={{ color: '#BF5700' }}><i>{questionsState[0].topic}</i></Card.Header>
-
-
+        <Card.Header style={{ color: '#BF5700', fontWeight: '600' }}><i>{questionsState[0].topic}</i></Card.Header>
 
         <Card.Body style={{ borderRadius: '0px !important', backgroundColor: 'white', width: 'auto' }}>
-
           {/* QUESTION */}
           <Card.Title style={{
             textAlign: questionsState[0].question.length < 80 ? 'center' : 'justify',
@@ -148,22 +108,23 @@ const Question = ({ questionsState, setQuestionsState, endSession, shuffle }) =>
           <Card.Text style={{ display: questionsState[0].subquestion !== '' ? 'inline-flex' : 'none' }}>{questionsState[0].subquestion}
           </Card.Text>
 
-
-
         </Card.Body>
         {/* MULTIPLE CHOICE */}
-        <ListGroup variant='flush' as='ol' style={{ backgroundColor: '' }} >
-          {
-            questionsState[0].answers.map((answer, index) => (
-              < Col xs='auto' id='answerGrid'>
-            <ListGroup.Item as='li' id={'answer' + index} style={{ textAlign: 'left' }} >{answer}</ListGroup.Item>
-          </Col >
-            ))
-          }
-        </ListGroup>
+        <ListGroup as='ol'>
+          <ol type='A'>
+            {
+              questionsState[0].answers.map((answer, index) => (
 
-        {/* SCANTRON */}  <Form style={{ backgroundColor: '#B5FFF2', paddingTop: '1.3vh' }}>
-          <Container fluid>
+                <ListGroup.Item id={'answer' + index} style={{ marginLeft: '-23px', paddingLeft: '23px', textAlign: 'left' }} >
+                  <li>{answer}</li>
+                </ListGroup.Item>
+              ))
+            }
+          </ol>
+        </ListGroup>
+        {/* SCANTRON */}
+        <Form style={{ backgroundColor: '#B5FFF2', paddingTop: '1.3vh' }}>
+          <Container>
             <div key={'inline-radio'} className="mb-3" >
               <Form.Check inline label="A" name="group1" type='radio' value={0} id='inline-radio-0' onClick={handleRadio} />
               <Form.Check inline label="B" name="group1" type='radio' value={1} id='inline-radio-1' onClick={handleRadio} />
