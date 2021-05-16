@@ -75,12 +75,13 @@ const Question = ({ questionsState, setQuestionsState, endSession, shuffle }) =>
       document.getElementById('inline-radio-' + radioSelection).checked = false;
       document.getElementById('answer' + radioSelection).style['background-color'] = '';
       let currentState = questionsState;
+      currentState[0].wrongCt += 1;
       let currentScore = currentState[0].score;
       if (currentScore > 0) {
         currentState[0].score -= 1
       }
-      currentState.push(currentState.splice(0, 1)[0])
-      // currentState.push(shuffle(wrongAnswerCard));
+      currentState.push(currentState.splice(0, 1)[0]);
+      console.log(currentState)
       // setQuestionsState(currentState)
     }
 
