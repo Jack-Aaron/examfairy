@@ -16,15 +16,14 @@ const App = () => {
       shuffle(question.answers); // shuffles answers within the questions
       setQuestionsState(shuffledQuestions)
     })
-  };
+  }
   // test ends
   const [session, setSession] = useState(true)
   const endSession = () => setSession(false)
 
   return (
     <div className='App'>
-      <Container className='questionCard'
-        style={{ display: session ? 'block' : 'none' }}>
+      <Container style={{ display: session ? 'block' : 'none' }}>
         {questionsState !== undefined ?
           <Question questionsState={questionsState}
             setQuestionsState={setQuestionsState}

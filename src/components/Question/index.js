@@ -7,20 +7,24 @@ import Card from 'react-bootstrap/Card';
 import './style.css';
 
 const Question = ({ questionsState, setQuestionsState, endSession }) => {
-
+  // manages hint display and mouse cursor
   const [hintState, setHintState] = useState(false);
   const toggleHint = () => setHintState(true)
   const [isHovering, setIsHovering] = useState(false);
   const toggleIsHovering = () => setIsHovering(!isHovering)
+  // manages radio button control
   const [radioState, setRadioState] = useState();
+  const changeBgColor = (prefix, tag, color) => {
+    document.getElementById(`${prefix}` + tag).style['background-color'] = `${color}`
+  }
   const handleRadio = e => {
     let radioSelection = e.target.value;
-    for (let i = 0; i < 4; i++) {
-      document.getElementById('answer' + i).style['background-color'] = '';
-    }
-    document.getElementById('answer' + radioSelection).style['background-color'] = '#EFFBFF';
     setRadioState(radioSelection);
-    setBtnDisabled(false)
+    setBtnDisabled(false);
+    for (let i = 0; i < 4; i++) {
+      changeBgColor('answer', i, '')
+    }
+    document.getElementById('answer' + radioSelection).style['background-color'] = '#EFFBFF'
   }
 
   const [btnDisabled, setBtnDisabled] = useState(true);
@@ -78,66 +82,50 @@ const Question = ({ questionsState, setQuestionsState, endSession }) => {
 
   return (
     <div className='col-auto mb-3'>
-      <Card
-        style={{ display: 'inline-flex', border: '4px dotted #9CFF19', boxShadow: '4px 8px 14px rgb(113 137 255 / 55%)' }} className="text-center"
-      >
-        <Card.Header style={{ color: '#BF5700', fontWeight: '600' }}><i>{questionsState[0].topic}</i></Card.Header>
+      <Card className='questionCard'>
+        <Card.Header>{questionsState[0].topic}</Card.Header>
+        <Card.Body>
 
-        <Card.Body style={{ borderRadius: '0px !important', backgroundColor: 'white', width: 'auto' }}>
           {/* QUESTION */}
-          <Card.Title style={{
-            textAlign: questionsState[0].question.length < 80 ? 'center' : 'justify',
-            paddingTop: '0.5vh', paddingBottom: '3vh', paddingLeft: '1vw', paddingRight: '1vw',
-            fontSize: 'x-large'
-          }}> {questionsState[0].question}</Card.Title>
+          <Card.Title>{questionsState[0].question}</Card.Title>
           <Card.Subtitle>
             <Card.Link style={{
               cursor: isHovering ? 'pointer' : 'auto',
-              textDecoration: 'none',
               color: !hintState ? '#C499FF' : 'grey'
             }}
               onMouseOver={toggleIsHovering}
               onMouseOut={toggleIsHovering}
-              onClick={toggleHint}>{
-                !hintState && questionsState[0].hint ? <i>Hint?</i> : questionsState[0].hint
-              }
-
+              onClick={toggleHint}>{!hintState && questionsState[0].hint ?
+                <i>Hint?</i> : questionsState[0].hint}
             </Card.Link>
           </Card.Subtitle>
-
-          <Card.Text style={{ display: questionsState[0].subquestion !== '' ? 'inline-flex' : 'none' }}>{questionsState[0].subquestion}
+          {/* --SUBQUESTION */}
+          <Card.Text style={{
+            display: questionsState[0].subquestion !== ''
+              ? 'inline-flex' : 'none'
+          }}>{questionsState[0].subquestion}
           </Card.Text>
-
         </Card.Body>
+
         {/* MULTIPLE CHOICE */}
-        <ListGroup as='ol'>
-          <ol type='A'>
-            {
-              questionsState[0].answers.map((answer, index) => (
+        <ListGroup as='ol'><ol type='A'>
+          {questionsState[0].answers.map((answer, index) => (
+            <ListGroup.Item id={'answer' + index} className='answer'>
+              <li>{answer}</li>
+            </ListGroup.Item>
+          ))}</ol></ListGroup>
 
-                <ListGroup.Item id={'answer' + index} style={{ marginLeft: '-23px', paddingLeft: '23px', textAlign: 'left' }} >
-                  <li>{answer}</li>
-                </ListGroup.Item>
-              ))
-            }
-          </ol>
-        </ListGroup>
         {/* SCANTRON */}
-        <Form style={{ backgroundColor: '#B5FFF2', paddingTop: '1.3vh' }}>
-          <Container>
-            <div key={'inline-radio'} className="mb-3" >
-              <Form.Check inline label="A" name="group1" type='radio' value={0} id='inline-radio-0' onClick={handleRadio} />
-              <Form.Check inline label="B" name="group1" type='radio' value={1} id='inline-radio-1' onClick={handleRadio} />
-              <Form.Check inline label="C" name="group1" type='radio' value={2} id='inline-radio-2' onClick={handleRadio} />
-              <Form.Check inline label="D" name="group1" type='radio' value={3} id='inline-radio-3' onClick={handleRadio} />
-            </div>
-          </Container>
-        </Form>
+        <Form><Container key={'inline-radio'} className='mb-3'>
+          <Form.Check inline label='A' name='radioGroup1' type='radio' value={0} id='inline-radio-0' onClick={handleRadio} />
+          <Form.Check inline label='B' name='radioGroup1' type='radio' value={1} id='inline-radio-1' onClick={handleRadio} />
+          <Form.Check inline label='C' name='radioGroup1' type='radio' value={2} id='inline-radio-2' onClick={handleRadio} />
+          <Form.Check inline label='D' name='radioGroup1' type='radio' value={3} id='inline-radio-3' onClick={handleRadio} />
+        </Container></Form>
 
-        <Card.Footer className="text-muted">
-          <Button style={{ paddingTop: '0.2vh' }} type='submit' onClick={answerQuestion} disabled={btnDisabled}>Continue</Button>
+        <Card.Footer className='text-muted'>
+          <Button type='submit' onClick={answerQuestion} disabled={btnDisabled}>Continue</Button>
         </Card.Footer>
-
       </Card >
     </div >
   );
