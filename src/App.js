@@ -42,7 +42,7 @@ function App() {
 
     let shuffledQuestions = shuffle(QUESTIONS);
     shuffledQuestions = shuffledQuestions.map((question) => {
-      shuffle(question.answers)
+      shuffle(question.answers);
       setQuestionsState(shuffledQuestions)
     })
   }

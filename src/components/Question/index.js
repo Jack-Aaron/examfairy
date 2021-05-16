@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Transition } from 'react-transition-group';
 import AdvanceBtn from '../AdvanceBtn';
 import Button from 'react-bootstrap/Button';
@@ -23,7 +23,6 @@ const Question = ({ questionsState, setQuestionsState, endSession, shuffle }) =>
   const toggleHint = () => {
     setHintState(true)
   }
-
 
   // const questionPreOrdinals = ['A)', 'B)', 'C)', 'D)'];
 
@@ -60,6 +59,8 @@ const Question = ({ questionsState, setQuestionsState, endSession, shuffle }) =>
       //update score
       let currentState = questionsState;
       currentState[0].score += 1;
+      currentState[0].correctCt += 1;
+      currentState[0].viewCt += 1;
       //save all to local storage (to keep track of score over time)
       localStorage.setItem('latest_progress', JSON.stringify(currentState));
       // copy and modify state array with the question removed (if correct)
@@ -75,14 +76,9 @@ const Question = ({ questionsState, setQuestionsState, endSession, shuffle }) =>
       document.getElementById('inline-radio-' + radioSelection).checked = false;
       document.getElementById('answer' + radioSelection).style['background-color'] = '';
       let currentState = questionsState;
-      currentState[0].wrongCt += 1;
-      let currentScore = currentState[0].score;
-      if (currentScore > 0) {
-        currentState[0].score -= 1
-      }
+      currentState[0].correctCt += 1;
+      currentState[0].viewCt += 1;
       currentState.push(currentState.splice(0, 1)[0]);
-      console.log(currentState)
-      // setQuestionsState(currentState)
     }
 
     else {
@@ -92,7 +88,7 @@ const Question = ({ questionsState, setQuestionsState, endSession, shuffle }) =>
       }
       let radioSelection = radioState;
       let currentState = questionsState;
-
+      currentState[0].wrongCt += 1;
       document.getElementById('answer' + radioSelection).style['background-color'] = '#FFCCCB';
       let currentScore = currentState[0].score;
       if (currentScore > 0) {
@@ -160,8 +156,8 @@ const Question = ({ questionsState, setQuestionsState, endSession, shuffle }) =>
           {
             questionsState[0].answers.map((answer, index) => (
               < Col xs='auto' id='answerGrid'>
-                <ListGroup.Item as='li' id={'answer' + index} style={{ textAlign: 'left' }} >{answer}</ListGroup.Item>
-              </Col >
+            <ListGroup.Item as='li' id={'answer' + index} style={{ textAlign: 'left' }} >{answer}</ListGroup.Item>
+          </Col >
             ))
           }
         </ListGroup>
