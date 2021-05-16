@@ -115,7 +115,7 @@ const Question = ({ questionsState, setQuestionsState, endSession, shuffle }) =>
 
       <Card
 
-        style={{ display: 'inline-flex', border: '2px solid #9CFF19', minWidth: '50%', maxWidth: '50%', maxHeight: '50%', boxShadow: '4px 8px 14px rgb(113 137 255 / 55%)' }} className="text-center"
+        style={{ display: 'inline-flex', border: '4px dotted #9CFF19', minWidth: '50%', maxWidth: '50%', maxHeight: '50%', boxShadow: '4px 8px 14px rgb(113 137 255 / 55%)' }} className="text-center"
 
       >
         <Card.Header style={{ color: '#BF5700' }}><i>{questionsState[0].topic}</i></Card.Header>
