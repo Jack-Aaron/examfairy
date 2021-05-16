@@ -24,7 +24,7 @@ function App() {
       array[randomIndex] = temporaryValue;
     }
     return array;
-  }  
+  }
 
   const [questionsState, setQuestionsState] = useState();
 
@@ -41,17 +41,10 @@ function App() {
     // else {
 
     let shuffledQuestions = shuffle(QUESTIONS);
-    console.group();
     shuffledQuestions = shuffledQuestions.map((question) => {
       shuffle(question.answers)
       setQuestionsState(shuffledQuestions)
-      console.log('Question: ' + question.question)
-      console.log('Score: ' + question.score)
     })
-    console.groupEnd()
-
-
-    // };
   }
 
   useEffect(() => prepareQuestions(), []);

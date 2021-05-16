@@ -10,8 +10,6 @@ import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
 import QUESTIONS from '../../questions';
 
-
-
 const Question = ({ questionsState, setQuestionsState, endSession, shuffle }) => {
 
   const [hintState, setHintState] = useState(false);
@@ -73,10 +71,9 @@ const Question = ({ questionsState, setQuestionsState, endSession, shuffle }) =>
     }
     // CORRECT BUT NOT ON THE FIRST TRY (CONSIDERED A MISS)
     else if (questionsState[0].answers[radioSelection] === questionsState[0].correctAnswer && wrongAnswer) {
-
-      console.log('PORP!')
       setWrongAnswer(false);
       document.getElementById('inline-radio-' + radioSelection).checked = false;
+      document.getElementById('answer' + radioSelection).style['background-color'] = '';
       let currentState = questionsState;
       let currentScore = currentState[0].score;
       if (currentScore > 0) {
@@ -121,16 +118,14 @@ const Question = ({ questionsState, setQuestionsState, endSession, shuffle }) =>
 
       <Card
 
-        style={{ display: 'inline-flex', border: '2px solid #9CFF19', minWidth: '50%', maxWidth: '50%', maxHeight: '50%', boxShadow: '4px 8px 14px rgb(113 137 255 / 55%)'}} className="text-center"
+        style={{ display: 'inline-flex', border: '2px solid #9CFF19', minWidth: '50%', maxWidth: '50%', maxHeight: '50%', boxShadow: '4px 8px 14px rgb(113 137 255 / 55%)' }} className="text-center"
 
       >
         <Card.Header style={{ color: '#BF5700' }}><i>{questionsState[0].topic}</i></Card.Header>
 
 
 
-        <Card.Body style={{  borderRadius: '0px !important', backgroundColor: 'white', width: 'auto' }}>
-
-
+        <Card.Body style={{ borderRadius: '0px !important', backgroundColor: 'white', width: 'auto' }}>
 
           {/* QUESTION */}
           <Card.Title style={{
@@ -160,11 +155,11 @@ const Question = ({ questionsState, setQuestionsState, endSession, shuffle }) =>
 
         </Card.Body>
         {/* MULTIPLE CHOICE */}
-        <ListGroup variant='flush' as='ol' style={{backgroundColor:''}} >
+        <ListGroup variant='flush' as='ol' style={{ backgroundColor: '' }} >
           {
             questionsState[0].answers.map((answer, index) => (
               < Col xs='auto' id='answerGrid'>
-                <ListGroup.Item as='li' key={answer.id} id={'answer' + index} style={{ textAlign: 'left' }} >{answer}</ListGroup.Item>
+                <ListGroup.Item as='li' id={'answer' + index} style={{ textAlign: 'left' }} >{answer}</ListGroup.Item>
               </Col >
             ))
           }
