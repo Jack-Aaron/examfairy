@@ -6,7 +6,7 @@ import Form from 'react-bootstrap/Form';
 import Card from 'react-bootstrap/Card';
 import './style.css';
 
-const Question = ({ questionsState, setQuestionsState, endSession }) => {
+const Question = ({ progressForLocalStorage, setProgressForLocalStorage, fetchLocalStorage, mutateStorageClone, questionsState, setQuestionsState, endSession }) => {
   // manages hint display and mouse cursor
   const [hintState, setHintState] = useState(false);
   const toggleHint = () => setHintState(true);
@@ -44,11 +44,41 @@ const Question = ({ questionsState, setQuestionsState, endSession }) => {
       handleBgColor(radioSelection, '');
       // update score
       let currentState = questionsState;
-      currentState[0].score += 1;
-      currentState[0].correctCt += 1;
-      currentState[0].viewCt += 1; // iterate the question's rotation
-      //save all to local storage (to keep track of score over time)
 
+
+
+      currentState[0].score++
+      currentState[0].correctCt++
+      currentState[0].viewCt++ // iterate the question's rotation
+
+
+      //save all to local storage (to keep track of score over time)
+      let storedProgress = {};
+      if (fetchLocalStorage()) return
+      else storedProgress = fetchLocalStorage();
+
+      let filterMe = currentState;
+
+
+      let updatedQuestion = filterMe.filter(question => { return question.id === currentState[0].id });
+
+      let progressObj = progressForLocalStorage;
+      let outdatedQuestion = progressObj.filter(question => { return question.id === updatedQuestion.id });
+
+      let goldIndex = progressObj.indexOf(outdatedQuestion);
+      console.log(goldIndex);
+
+      let filterMeAgain = currentState;
+
+      // let outdatedProgress = filterMeAgain.forEach(element => {
+
+      // }); ((question) => { return question.id === currentState[0].id });
+
+
+
+
+      // setLocallyStoredProgress(currentState);
+      // mutateStorageClone(locallyStoredProgress);
       // copy and modify state array with the question removed (if correct)
       let newQuestionSet = currentState.splice(1, currentState.length - 1);
       if (newQuestionSet.length === 0) endSession()
@@ -60,16 +90,17 @@ const Question = ({ questionsState, setQuestionsState, endSession }) => {
       clearRadioBtn(radioSelection); // reset button selection
       handleBgColor(radioSelection, ''); // reset answer bg color
       let currentState = questionsState;
-      currentState[0].viewCt += 1; // iterate the question's rotation
+      currentState[0].viewCt++ // iterate the question's rotation
+      console.log('correct but not first try | currentState: ' + currentState);
       currentState.push(currentState.splice(0, 1)[0]); // puts question to back of queue
     }
     // WRONG ANSWER (CANNOT ADVANCE)
     else {
       if (questionsState.length !== 1) setWrongAnswer(true); // marked for scoring
       let currentState = questionsState;
-      currentState[0].wrongCt += 1;
+      currentState[0].wrongCt++
       let currentScore = currentState[0].score; // update score for this question
-      if (currentScore > 0) currentState[0].score -= 1;
+      if (currentScore > 0) currentState[0].score--
       handleBgColor(radioState, '#FFCCCB');
     }
   }
