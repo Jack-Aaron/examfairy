@@ -1,3 +1,7 @@
+.questionContainer{
+  padding-bottom: 7vh
+}
+
 .questionCard {
   display: inline-flex;
   border: 4px dotted #9CFF19;
@@ -24,12 +28,6 @@
 
 a {
   text-decoration: none
-}
-
-.answer {
-margin-left: -2rem;
-padding-left: 2rem;
-text-align: left
 }
 
 li::marker {

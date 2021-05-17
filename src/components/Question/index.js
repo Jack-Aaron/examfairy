@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import Container from 'react-bootstrap/Container';
-import ListGroup from 'react-bootstrap/ListGroup';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Card from 'react-bootstrap/Card';
+import AnswerGrid from '../AnswerGrid';
 import './style.css';
 
 const Question = ({ questionsState, setQuestionsState, storageClone, setStorageClone, endSession }) => {
@@ -15,6 +15,7 @@ const Question = ({ questionsState, setQuestionsState, storageClone, setStorageC
   // manages radio button control
   const [radioState, setRadioState] = useState();
   const clearRadioBtn = (tag) =>
+    // console.log(document.getElementById('inline-radio-' + tag).checked === false)
     document.getElementById('inline-radio-' + tag).checked = false;
   // dynamically change answer background color on selection
   const handleBgColor = (tag, color) => {
@@ -25,7 +26,6 @@ const Question = ({ questionsState, setQuestionsState, storageClone, setStorageC
   }
   const handleRadio = e => {
     let radioSelection = e.target.value;
-    handleBgColor(radioSelection, '#EFFBFF')
     setRadioState(radioSelection);
     setBtnDisabled(false); // submit button activates
     for (let i = 0; i < 4; i++) { handleBgColor(i, '') } // resets colors
@@ -33,9 +33,14 @@ const Question = ({ questionsState, setQuestionsState, storageClone, setStorageC
   }
   const [btnDisabled, setBtnDisabled] = useState(true);
   const [wrongAnswer, setWrongAnswer] = useState(false); // determines logic flow later
+  // strikeout bad answer effects for users
+  const toggleStrikethrough = (tag) => {
+    if (document.getElementById(tag).style['text-decoration'] === 'none') document.getElementById(tag).style['text-decoration'] = 'line-through'
+    else document.getElementById(tag).style['text-decoration'] = 'none'
+  }
 
+  // user submits answer on question card
   const submitAnswer = () => {
-
     setHintState(false);
     setBtnDisabled(true);
     let currentState = questionsState; // copy state object
@@ -51,27 +56,8 @@ const Question = ({ questionsState, setQuestionsState, storageClone, setStorageC
       // add to progress state
       let storageArr = [];
       if (storageClone.length > 0) storageArr = storageClone;
-      console.log(storageArr)
-      console.log(currentState)
       storageArr.push(currentState[0]);
-      console.log(storageArr);
-
       setStorageClone(storageArr);
-      // LOG QUESTION REPORTS
-      console.log(
-        `REPORT ON QUESTION #${currentState[0].id}:`
-      );
-      console.group()
-      console.log('viewCt: ' + currentState[0].viewCt);
-      console.log('wrongCt: ' + currentState[0].wrongCt);
-      console.log('correctCt: ' + currentState[0].correctCt);
-      console.groupEnd()
-      console.group()
-      console.log('score: ' + currentState[0].score);
-      console.groupEnd()
-      console.group()
-      console.log('subject: ' + currentState[0].topic);
-      console.groupEnd()
       // copy and modify state array with the question removed (if correct)
       let newQuestionSet = currentState.splice(1, currentState.length - 1);
       if (newQuestionSet.length === 0) endSession()
@@ -88,7 +74,6 @@ const Question = ({ questionsState, setQuestionsState, storageClone, setStorageC
       else {
         let storageArr = [];
         if (storageClone.length > 0) storageArr = storageClone;
-        console.log(currentState)
         storageArr.push(currentState[0]);
         setStorageClone(storageArr);
         endSession()
@@ -100,13 +85,13 @@ const Question = ({ questionsState, setQuestionsState, storageClone, setStorageC
       let currentState = questionsState;
       currentState[0].wrongCt++
       let currentScore = currentState[0].score; // update score for this question
-      if (currentScore > 0) currentState[0].score--
-      handleBgColor(radioState, '#FFCCCB');
+      if (currentScore > 0) currentState[0].score--;
+      handleBgColor(radioSelection, '#FFCCCB');
     }
   }
 
   return (
-    <Container fluid className='col-auto mb-3'>
+    <Container fluid className='col-auto mb-3 questionContainer'>
       <Card className='questionCard'>
         <Card.Header>{questionsState[0].topic}</Card.Header>
         <Card.Body>
@@ -133,12 +118,9 @@ const Question = ({ questionsState, setQuestionsState, storageClone, setStorageC
         </Card.Body>
 
         {/* MULTIPLE CHOICE */}
-        <ListGroup as='ol'><ol type='A'>
-          {questionsState[0].answers.map((answer, index) => (
-            <ListGroup.Item id={'answer' + index} className='answer'>
-              <li>{answer}</li>
-            </ListGroup.Item>
-          ))}</ol></ListGroup>
+        <AnswerGrid className='answer' as='ol'
+          questionsState={questionsState} toggleStrikethrough={toggleStrikethrough}
+        />
 
         {/* SCANTRON */}
         <Form><Container key={'inline-radio'} className='mb-3'>
