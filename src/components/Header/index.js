@@ -8,7 +8,7 @@ const Header = ({ questionsState }) => {
   return (
     <div>
       <Jumbotron>
-        <h1 className="display-1">{totalQuestions.length + ' | ' + 4}</h1>
+        <h1 className="display-1">{totalQuestions.length + ' | ' + 10}</h1>
         <br /><br /><br />
       </Jumbotron>
     </div>
