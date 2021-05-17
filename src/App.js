@@ -23,12 +23,12 @@ const App = () => {
 
   return (
     <div className='App'>
-      <Container style={{ display: session ? 'block' : 'none' }}>
-        {questionsState !== undefined ?
+      <Container>
+        {questionsState !== undefined && session ?
           <Question questionsState={questionsState}
             setQuestionsState={setQuestionsState}
             endSession={endSession} shuffle={shuffle}
-          /> : null}
+          /> : !session ? <h1>FINISHED!</h1> : null}
       </Container>
     </div>)
 };

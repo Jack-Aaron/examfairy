@@ -9,85 +9,79 @@ import './style.css';
 const Question = ({ questionsState, setQuestionsState, endSession }) => {
   // manages hint display and mouse cursor
   const [hintState, setHintState] = useState(false);
-  const toggleHint = () => setHintState(true)
+  const toggleHint = () => setHintState(true);
   const [isHovering, setIsHovering] = useState(false);
-  const toggleIsHovering = () => setIsHovering(!isHovering)
+  const toggleIsHovering = () => setIsHovering(!isHovering);
   // manages radio button control
   const [radioState, setRadioState] = useState();
-  const changeBgColor = (prefix, tag, color) => {
-    document.getElementById(`${prefix}` + tag).style['background-color'] = `${color}`
+  const clearRadioBtn = (tag) =>
+    document.getElementById('inline-radio-' + tag).checked = false;
+  // dynamically change answer background color on selection
+  const handleBgColor = (tag, color) => {
+    if (document.getElementById('answer' + tag)
+      .style['backgroundColor'] !== color)
+      document.getElementById('answer' + tag)
+        .style['backgroundColor'] = color
   }
   const handleRadio = e => {
     let radioSelection = e.target.value;
+    handleBgColor(radioSelection, '#EFFBFF')
     setRadioState(radioSelection);
-    setBtnDisabled(false);
-    for (let i = 0; i < 4; i++) {
-      changeBgColor('answer', i, '')
-    }
-    document.getElementById('answer' + radioSelection).style['background-color'] = '#EFFBFF'
+    setBtnDisabled(false); // submit button activates
+    for (let i = 0; i < 4; i++) { handleBgColor(i, '') } // resets colors
+    handleBgColor(radioSelection, '#EFFBFF') // changes current selection
   }
-
   const [btnDisabled, setBtnDisabled] = useState(true);
-  const [wrongAnswer, setWrongAnswer] = useState(false);
-  const answerQuestion = e => {
-    e.preventDefault();
-    e.stopPropagation();
+  const [wrongAnswer, setWrongAnswer] = useState(false); // determines logic flow later
+
+  const submitAnswer = () => {
     setHintState(false);
     setBtnDisabled(true);
-    let radioSelection = radioState;
-
+    let radioSelection = radioState; // get answer election
+    // CORRECT ANSWER
     if (questionsState[0].answers[radioSelection] === questionsState[0].correctAnswer && !wrongAnswer) {
-      // CORRECT ANSWER
-      document.getElementById('inline-radio-' + radioSelection).checked = false;
-      document.getElementById('answer' + radioSelection).style['background-color'] = '';
-      //update score
+      clearRadioBtn(radioSelection);
+      handleBgColor(radioSelection, '');
+      // update score
       let currentState = questionsState;
       currentState[0].score += 1;
       currentState[0].correctCt += 1;
-      currentState[0].viewCt += 1;
+      currentState[0].viewCt += 1; // iterate the question's rotation
       //save all to local storage (to keep track of score over time)
-      localStorage.setItem('latest_progress', JSON.stringify(currentState));
+
       // copy and modify state array with the question removed (if correct)
       let newQuestionSet = currentState.splice(1, currentState.length - 1);
-      if (newQuestionSet.length === 0) {
-        endSession()
-      }
+      if (newQuestionSet.length === 0) endSession()
       else setQuestionsState(newQuestionSet)
     }
     // CORRECT BUT NOT ON THE FIRST TRY (CONSIDERED A MISS)
     else if (questionsState[0].answers[radioSelection] === questionsState[0].correctAnswer && wrongAnswer) {
-      setWrongAnswer(false);
-      document.getElementById('inline-radio-' + radioSelection).checked = false;
-      document.getElementById('answer' + radioSelection).style['background-color'] = '';
+      setWrongAnswer(false); // removes this tag for keeping score
+      clearRadioBtn(radioSelection); // reset button selection
+      handleBgColor(radioSelection, ''); // reset answer bg color
       let currentState = questionsState;
-      currentState[0].correctCt += 1;
-      currentState[0].viewCt += 1;
-      currentState.push(currentState.splice(0, 1)[0]);
+      currentState[0].viewCt += 1; // iterate the question's rotation
+      currentState.push(currentState.splice(0, 1)[0]); // puts question to back of queue
     }
+    // WRONG ANSWER (CANNOT ADVANCE)
     else {
-      // WRONG ANSWER (CANNOT ADVANCE)
-      if (questionsState.length !== 1) {
-        setWrongAnswer(true)
-      }
-      let radioSelection = radioState;
+      if (questionsState.length !== 1) setWrongAnswer(true); // marked for scoring
       let currentState = questionsState;
       currentState[0].wrongCt += 1;
-      document.getElementById('answer' + radioSelection).style['background-color'] = '#FFCCCB';
-      let currentScore = currentState[0].score;
-      if (currentScore > 0) {
-        currentState[0].score -= 1
-      }
+      let currentScore = currentState[0].score; // update score for this question
+      if (currentScore > 0) currentState[0].score -= 1;
+      handleBgColor(radioState, '#FFCCCB');
     }
   }
 
   return (
-    <div className='col-auto mb-3'>
+    <Container fluid className='col-auto mb-3'>
       <Card className='questionCard'>
         <Card.Header>{questionsState[0].topic}</Card.Header>
         <Card.Body>
 
           {/* QUESTION */}
-          <Card.Title>{questionsState[0].question}</Card.Title>
+          <Card.Title style={{ textAlign: questionsState[0].question.length > 80 ? 'justify' : 'center' }}>{questionsState[0].question}</Card.Title>
           <Card.Subtitle>
             <Card.Link style={{
               cursor: isHovering ? 'pointer' : 'auto',
@@ -124,10 +118,10 @@ const Question = ({ questionsState, setQuestionsState, endSession }) => {
         </Container></Form>
 
         <Card.Footer className='text-muted'>
-          <Button type='submit' onClick={answerQuestion} disabled={btnDisabled}>Continue</Button>
+          <Button type='submit' onClick={submitAnswer} disabled={btnDisabled}>Continue</Button>
         </Card.Footer>
       </Card >
-    </div >
+    </Container>
   );
 };
 
