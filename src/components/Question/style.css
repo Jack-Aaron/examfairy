@@ -1,0 +1,42 @@
+.questionCard {
+  display: inline-flex;
+  border: 4px dotted #9CFF19;
+  box-shadow: 4px 8px 14px rgb(113 137 255 / 55%);
+}
+
+.card-header {
+  color: #BF5700;
+  font-weight: 600;
+  font-style: italic
+}
+
+.card-title {
+  padding-top: 0.5vh;
+  padding-bottom: 3vh;
+  padding-left: 0.5vw;
+  padding-right: 0.5vw;
+  font-size: x-large
+}
+
+.card-body {
+  flex: none;
+}
+
+a {
+  text-decoration: none
+}
+
+.answer {
+margin-left: -23px;
+padding-left: 23px;
+text-align: left
+}
+
+li::marker {
+  font-weight: 600
+}
+
+form {
+  background: #B5FFF2;
+  padding-top: 1.3vh
+}

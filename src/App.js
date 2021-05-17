@@ -1,75 +1,36 @@
 import React, { useEffect, useState } from 'react';
-// import { Transition } from 'react-transition-group';
-import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Container from 'react-bootstrap/Container'
 import Question from './components/Question';
 import QUESTIONS from './questions';
+import shuffle from './shuffle';
+import './App.css';
 
-function App() {
-
-  const shuffle = (array) => { //https://bit.ly/3eNujre
-    var currentIndex = array.length, temporaryValue, randomIndex;
-
-    // While there remain elements to shuffle...
-    while (0 !== currentIndex) {
-
-      // Pick a remaining element...
-      randomIndex = Math.floor(Math.random() * currentIndex);
-      currentIndex -= 1;
-
-      // And swap it with the current element.
-      temporaryValue = array[currentIndex];
-      array[currentIndex] = array[randomIndex];
-      array[randomIndex] = temporaryValue;
-    }
-    return array;
-  }
-
+const App = () => {
+  // prepares questions & answers and sets state
+  useEffect(() => prepareQuestions(), []);
   const [questionsState, setQuestionsState] = useState();
-
   const prepareQuestions = () => {
-    //   let latestProgress = JSON.parse(localStorage.getItem('latest_progress'));
-    //   if (latestProgress) {
-    //     let shuffledQuestions = shuffle(latestProgress);
-    //     console.log(shuffledQuestions);
-    //     shuffledQuestions = shuffledQuestions.map((question) => {
-    //       shuffle(question.answers)
-    //       setQuestionsState(shuffledQuestions)
-    //     })
-    //   }
-    // else {
-
-    let shuffledQuestions = shuffle(QUESTIONS);
+    let shuffledQuestions = shuffle(QUESTIONS); // input of a question set
     shuffledQuestions = shuffledQuestions.map((question) => {
-      shuffle(question.answers);
+      shuffle(question.answers); // shuffles answers within the questions
       setQuestionsState(shuffledQuestions)
     })
   }
-
-  useEffect(() => prepareQuestions(), []);
-
-  const [session, setSession] = useState(true);
-
-  const endSession = () => {
-    setSession(false)
-  }
+  // test ends
+  const [session, setSession] = useState(true)
+  const endSession = () => setSession(false)
 
   return (
-    <div className='App' style={{ backgroundColor: 'lightpink' }}>
-      <Container fluid style={{ display: session ? 'inherit' : 'none', paddingTop: '30vh' }}>
-        {
-          questionsState !== undefined ?
-            <Question style={{ minWidth: '600px' }} questionsState={questionsState} setQuestionsState={setQuestionsState} endSession={endSession} shuffle={shuffle}
-            />
-            :
-            <div>All done!</div>
-        }
-
-
+    <div className='App'>
+      <Container>
+        {questionsState !== undefined && session ?
+          <Question questionsState={questionsState}
+            setQuestionsState={setQuestionsState}
+            endSession={endSession} shuffle={shuffle}
+          /> : !session ? <h1>FINISHED!</h1> : null}
       </Container>
-    </div>
-  );
-}
+    </div>)
+};
 
-export default App;
+export default App
