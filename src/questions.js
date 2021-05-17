@@ -1,6 +1,6 @@
 const QUESTIONS = [
   {
-    id: '0000',
+    id: 'f9',
     question: 'Which of the following is NOT a function of the government?',
     answers: ['Establishing Order',
       'Managing Conflicts',
@@ -16,7 +16,7 @@ const QUESTIONS = [
     subquestion: ''
   },
   {
-    id: '0001',
+    id: 'a0',
     question: 'Mr. Akundo is at the bookstore trying to find a book about History. He cannot see any signs that say "History," but there is a sign that says "Hist."',
     answers: ['Abbrevation',
       'Compound words',
@@ -32,7 +32,7 @@ const QUESTIONS = [
     subquestion: 'This second sign is an example of:'
   },
   {
-    id: '0002',
+    id: 'a1',
     question: 'Which sentence contains both an idiom AND a homograph?',
     answers: ['Right off the bat, Janey recognized that the habitat she and her team had entered was that of a bat.',
       'You\'ve got all your ducks in a row, kiddo, but it\'s plain to see that old plane will never fly again.',
@@ -48,7 +48,7 @@ const QUESTIONS = [
     subquestion: ''
   },
   {
-    id: '0003',
+    id: 'a2',
     question: '"There\'s a man who built a rocket and flew all the way to Mars, where he encountered the Martians. They gave him secret technology for him to bring back to Earth. Then, society rapidly transforms, and finally human armies propel toward the Red Planet."',
     answers: ['Plot',
       'Themes',

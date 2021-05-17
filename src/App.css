@@ -21,9 +21,13 @@
   }
 }
 
+.App-heading {
+  color: #5AB3FF;
+  font-weight: 900
+}
+
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
   color: white;
 }
 
