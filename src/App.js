@@ -3,24 +3,36 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Container from 'react-bootstrap/Container'
 import Question from './components/Question';
 import Header from './components/Header';
+import Quote from './components/Quote';
 import QUESTIONS from './questions';
 import shuffle from './shuffle';
 import './App.css';
 
 const App = () => {
   // prepare questions & answers and set states
+  const [quote, setQuote] = useState()
   const [questionsState, setQuestionsState] = useState()
   useEffect(() => {
+    fetch("https://type.fit/api/quotes") // https://bit.ly/3okopkK
+      .then(res => {
+        return res.json();
+      }).then(data => {
+        let quote = data[`${Math.floor(Math.random() * 1643)}`];
+        return quote
+      }).then(quote => {
+        setQuote(quote)
+      });
     let shuffledQuestions = shuffle(QUESTIONS); // paramater is input of a question set
     shuffledQuestions = shuffledQuestions.map(question => {
       shuffle(question.answers); // shuffles answers within the questions
       return setQuestionsState(shuffledQuestions) // **persistant sessions**
-    })
+    });
   }, []);
   // test ends
   const [storageClone, setStorageClone] = useState([])
   const [session, setSession] = useState(true)
   const endSession = () => {
+    console.log('BUTT YUD! ' + quote)
     localStorage.setItem('examFairy_progress', JSON.stringify(storageClone));
     setSession(false)
   };
@@ -36,7 +48,7 @@ const App = () => {
             storageClone={storageClone} setStorageClone={setStorageClone}
             endSession={endSession} shuffle={shuffle}
           />
-          : !session ? <h1 className='App-heading display-1'>YOU DID IT!</h1> : null}
+          : !session ? <Quote quote={quote} /> : null}
       </Container>
     </div>)
 };

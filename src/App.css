@@ -23,7 +23,8 @@
 
 .App-heading {
   color: #5AB3FF;
-  font-weight: 900
+  font-weight: 900;
+  font-style: italic;
 }
 
 .App-header {
