@@ -6,7 +6,7 @@ import Form from 'react-bootstrap/Form';
 import Card from 'react-bootstrap/Card';
 import './style.css';
 
-const Question = ({ progressForLocalStorage, setProgressForLocalStorage, fetchLocalStorage, mutateStorageClone, questionsState, setQuestionsState, endSession }) => {
+const Question = ({ questionsState, setQuestionsState, endSession }) => {
   // manages hint display and mouse cursor
   const [hintState, setHintState] = useState(false);
   const toggleHint = () => setHintState(true);
@@ -25,6 +25,7 @@ const Question = ({ progressForLocalStorage, setProgressForLocalStorage, fetchLo
   }
   const handleRadio = e => {
     let radioSelection = e.target.value;
+    console.log('!');
     handleBgColor(radioSelection, '#EFFBFF')
     setRadioState(radioSelection);
     setBtnDisabled(false); // submit button activates
@@ -44,41 +45,9 @@ const Question = ({ progressForLocalStorage, setProgressForLocalStorage, fetchLo
       handleBgColor(radioSelection, '');
       // update score
       let currentState = questionsState;
-
-
-
       currentState[0].score++
       currentState[0].correctCt++
-      currentState[0].viewCt++ // iterate the question's rotation
-
-
-      //save all to local storage (to keep track of score over time)
-      let storedProgress = {};
-      if (fetchLocalStorage()) return
-      else storedProgress = fetchLocalStorage();
-
-      let filterMe = currentState;
-
-
-      let updatedQuestion = filterMe.filter(question => { return question.id === currentState[0].id });
-
-      let progressObj = progressForLocalStorage;
-      let outdatedQuestion = progressObj.filter(question => { return question.id === updatedQuestion.id });
-
-      let goldIndex = progressObj.indexOf(outdatedQuestion);
-      console.log(goldIndex);
-
-      let filterMeAgain = currentState;
-
-      // let outdatedProgress = filterMeAgain.forEach(element => {
-
-      // }); ((question) => { return question.id === currentState[0].id });
-
-
-
-
-      // setLocallyStoredProgress(currentState);
-      // mutateStorageClone(locallyStoredProgress);
+      currentState[0].viewCt++ // iterate the question's rotation    
       // copy and modify state array with the question removed (if correct)
       let newQuestionSet = currentState.splice(1, currentState.length - 1);
       if (newQuestionSet.length === 0) endSession()
