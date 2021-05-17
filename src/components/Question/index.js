@@ -6,7 +6,7 @@ import Form from 'react-bootstrap/Form';
 import Card from 'react-bootstrap/Card';
 import './style.css';
 
-const Question = ({ questionsState, setQuestionsState, endSession }) => {
+const Question = ({ questionsState, setQuestionsState, storageClone, setStorageClone, endSession }) => {
   // manages hint display and mouse cursor
   const [hintState, setHintState] = useState(false);
   const toggleHint = () => setHintState(true);
@@ -25,7 +25,6 @@ const Question = ({ questionsState, setQuestionsState, endSession }) => {
   }
   const handleRadio = e => {
     let radioSelection = e.target.value;
-    console.log('!');
     handleBgColor(radioSelection, '#EFFBFF')
     setRadioState(radioSelection);
     setBtnDisabled(false); // submit button activates
@@ -36,36 +35,68 @@ const Question = ({ questionsState, setQuestionsState, endSession }) => {
   const [wrongAnswer, setWrongAnswer] = useState(false); // determines logic flow later
 
   const submitAnswer = () => {
+
     setHintState(false);
     setBtnDisabled(true);
+    let currentState = questionsState; // copy state object
     let radioSelection = radioState; // get answer election
     // CORRECT ANSWER
     if (questionsState[0].answers[radioSelection] === questionsState[0].correctAnswer && !wrongAnswer) {
       clearRadioBtn(radioSelection);
       handleBgColor(radioSelection, '');
       // update score
-      let currentState = questionsState;
       currentState[0].score++
       currentState[0].correctCt++
-      currentState[0].viewCt++ // iterate the question's rotation    
+      currentState[0].viewCt++ // iterate the question's rotation
+      // add to progress state
+      let storageArr = [];
+      if (storageClone.length > 0) storageArr = storageClone;
+      console.log(storageArr)
+      console.log(currentState)
+      storageArr.push(currentState[0]);
+      console.log(storageArr);
+
+      setStorageClone(storageArr);
+      // LOG QUESTION REPORTS
+      console.log(
+        `REPORT ON QUESTION #${currentState[0].id}:`
+      );
+      console.group()
+      console.log('viewCt: ' + currentState[0].viewCt);
+      console.log('wrongCt: ' + currentState[0].wrongCt);
+      console.log('correctCt: ' + currentState[0].correctCt);
+      console.groupEnd()
+      console.group()
+      console.log('score: ' + currentState[0].score);
+      console.groupEnd()
+      console.group()
+      console.log('subject: ' + currentState[0].topic);
+      console.groupEnd()
       // copy and modify state array with the question removed (if correct)
       let newQuestionSet = currentState.splice(1, currentState.length - 1);
       if (newQuestionSet.length === 0) endSession()
       else setQuestionsState(newQuestionSet)
     }
-    // CORRECT BUT NOT ON THE FIRST TRY (CONSIDERED A MISS)
+    // CORRECT BUT NOT ON THE FIRST SELECTION (CONSIDERED A MISS)
     else if (questionsState[0].answers[radioSelection] === questionsState[0].correctAnswer && wrongAnswer) {
       setWrongAnswer(false); // removes this tag for keeping score
       clearRadioBtn(radioSelection); // reset button selection
       handleBgColor(radioSelection, ''); // reset answer bg color
       let currentState = questionsState;
       currentState[0].viewCt++ // iterate the question's rotation
-      console.log('correct but not first try | currentState: ' + currentState);
-      currentState.push(currentState.splice(0, 1)[0]); // puts question to back of queue
+      if (questionsState.length > 1) currentState.push(currentState.splice(0, 1)[0]); // puts question to back of queue
+      else {
+        let storageArr = [];
+        if (storageClone.length > 0) storageArr = storageClone;
+        console.log(currentState)
+        storageArr.push(currentState[0]);
+        setStorageClone(storageArr);
+        endSession()
+      }
     }
     // WRONG ANSWER (CANNOT ADVANCE)
     else {
-      if (questionsState.length !== 1) setWrongAnswer(true); // marked for scoring
+      setWrongAnswer(true); // marked for scoring
       let currentState = questionsState;
       currentState[0].wrongCt++
       let currentScore = currentState[0].score; // update score for this question
