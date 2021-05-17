@@ -1,6 +1,9 @@
 {
   "name": "flashcards",
   "version": "0.1.0",
+  "engines": {
+    "node": "15.14.0"
+  },
   "private": true,
   "dependencies": {
     "@heroku/buildpack-registry": "^1.0.1",
