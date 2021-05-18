@@ -10,6 +10,7 @@
     ],
     "correctAnswer": "Directing Society",
     "topic": "Social Studies",
+    "TEKS": "8a",
     "hint": "Which of these should the government probably NOT be doing?",
     "viewCt": "0",
     "correctCt": "0",
@@ -28,6 +29,7 @@
     ],
     "correctAnswer": "Abbrevation",
     "topic": "English",
+    "TEKS": "2b",
     "hint": "Abbr.",
     "subquestion": "This second sign is an example of:"
   },
@@ -42,6 +44,7 @@
     ],
     "correctAnswer": "Right off the bat, Janey recognized that the habitat she and her team had entered was that of a bat.",
     "topic": "English",
+    "TEKS": "3d",
     "hint": "What does each sentence all already have?",
     "subquestion": ""
   },
@@ -56,6 +59,7 @@
     ],
     "correctAnswer": "Plot",
     "topic": "English",
+    "TEKS": "8c",
     "hint": "This seems to be about the important events of a story.",
     "subquestion": "What have you been told mostly about this story?"
   },
@@ -70,6 +74,7 @@
     ],
     "correctAnswer": "\"Two or more of the main characters have to fight it out.\"",
     "topic": "English",
+    "TEKS": "8c",
     "hint": "How is conflict used specifically in storytelling?",
     "subquestion": ""
   },
@@ -84,6 +89,7 @@
     ],
     "correctAnswer": "Normal, everyday people.",
     "topic": "English",
+    "TEKS": "9a",
     "hint": "What is special about folktales and their audience?",
     "subquestion": "Which answer best describes how folk was being used?"
   },
@@ -98,6 +104,7 @@
     ],
     "correctAnswer": "Individualism",
     "topic": "Social Studies",
+    "TEKS": "11d",
     "hint": "What does it sound like was bothering Mrs. Adams when she said this?",
     "subquestion": "Which word best describes the meaning of this quote from First Lady Abigail Adams?"
   },
@@ -112,6 +119,7 @@
     ],
     "correctAnswer": "Inventiveness",
     "topic": "Social Studies",
+    "TEKS": "14a",
     "hint": "e = mc²",
     "subquestion": ""
   },
@@ -171,6 +179,7 @@
     ],
     "correctAnswer": "A small written mark that is used in contractions and the possessive.",
     "topic": "English",
+    "TEKS": "11d",
     "hint": "If you have a Trophy, do you want to put it way up high like on the shelf?",
     "viewCt": "0",
     "correctCt": "0",
