@@ -3,10 +3,11 @@ import Jumbotron from 'react-bootstrap/Jumbotron';
 import './style.css';
 
 const Header = ({ questionsState }) => {
+  let count = questionsState.length;
   return (
     <div>
       <Jumbotron>
-        <h1 className="display-1">{(1) + ' | ' + questionsState.length}</h1>
+        <h1 className="display-1">{12 - count + 1 + ' | ' + 12}</h1>
         <br /><br /><br />
       </Jumbotron>
     </div>

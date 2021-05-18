@@ -36,9 +36,9 @@
     "question": "Which sentence contains both an idiom AND a homograph?",
     "answers": [
       "Right off the bat, Janey recognized that the habitat she and her team had entered was that of a bat.",
-      "You\"ve got all your ducks in a row, kiddo, but it\"s plain to see that old plane will never fly again.",
-      "Rain or shine, I\"ll either be late or tardy.",
-      "Here\"s the thing about baseball - when you\"re up to bat, you had better take a swing."
+      "You've got all your ducks in a row, kiddo, but it's plain to see that old plane will never fly again.",
+      "Rain or shine, I'll either be late or tardy.",
+      "Here's the thing about baseball - when you're up to bat, you had better take a swing."
     ],
     "correctAnswer": "Right off the bat, Janey recognized that the habitat she and her team had entered was that of a bat.",
     "topic": "English",
@@ -47,7 +47,7 @@
   },
   {
     "id": "a2",
-    "question": "\"There\"s a man who built a rocket and flew all the way to Mars, where he encountered the Martians. They gave him secret technology for him to bring back to Earth. Then, society rapidly transforms, and finally human armies propel toward the Red Planet.\"",
+    "question": "\"There's a man who built a rocket and flew all the way to Mars, where he encountered the Martians. They gave him secret technology for him to bring back to Earth. Then, society rapidly transforms, and finally human armies propel toward the Red Planet.\"",
     "answers": [
       "Plot",
       "Themes",
@@ -171,11 +171,11 @@
     ],
     "correctAnswer": "A small written mark that is used in contractions and the possessive.",
     "topic": "English",
-    "hint": "Use logic to get rid of wrong answers.",
+    "hint": "If you have a Trophy, do you want to put it way up high like on the shelf?",
     "viewCt": "0",
     "correctCt": "0",
     "wrongCt": "0",
     "score": "2",
-    "subquestion": "If you have a Trophy, do you want to put it way up high like on the shelf?"
+    "subquestion": ""
   }
 ]
