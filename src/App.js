@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Container from 'react-bootstrap/Container'
 import Question from './components/Question';
@@ -41,19 +42,21 @@ const App = () => {
   };
 
   return (
-    <div className='App'>
-      {questionsState !== undefined && session ?
-        <Header questionsState={questionsState} /> : null}
-      <Container>
+    <Router>
+      <div className='App'>
         {questionsState !== undefined && session ?
-          <Question questionsState={questionsState}
-            setQuestionsState={setQuestionsState}
-            storageClone={storageClone} setStorageClone={setStorageClone}
-            endSession={endSession} shuffle={shuffle}
-          />
-          : !session ? <Quote quote={quote} /> : null}
-      </Container>
-    </div>)
+          <Header questionsState={questionsState} /> : null}
+        <Container>
+          {questionsState !== undefined && session ?
+            <Question questionsState={questionsState}
+              setQuestionsState={setQuestionsState}
+              storageClone={storageClone} setStorageClone={setStorageClone}
+              endSession={endSession} shuffle={shuffle}
+            />
+            : !session ? <Quote quote={quote} /> : null}
+        </Container>
+      </div>
+    </Router>)
 };
 
 export default App

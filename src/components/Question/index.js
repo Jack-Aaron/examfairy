@@ -25,11 +25,11 @@ const Question = ({ questionsState, setQuestionsState, storageClone, setStorageC
         .style['backgroundColor'] = color
   }
   const handleRadio = e => {
-    let radioSelection = e.target.value;
-    setRadioState(radioSelection);
+    let radioState = e.target.value;
+    setRadioState(radioState);
     setBtnDisabled(false); // submit button activates
     for (let i = 0; i < 4; i++) { handleBgColor(i, '') } // resets colors
-    handleBgColor(radioSelection, '#EFFBFF') // changes current selection
+    handleBgColor(radioState, '#EFFBFF') // changes current selection
   }
   const [btnDisabled, setBtnDisabled] = useState(true);
   const [wrongAnswer, setWrongAnswer] = useState(false); // determines logic flow later
@@ -43,38 +43,38 @@ const Question = ({ questionsState, setQuestionsState, storageClone, setStorageC
   const submitAnswer = () => {
     setHintState(false);
     setBtnDisabled(true);
-    let currentState = questionsState; // copy state object
-    let radioSelection = radioState; // get answer election
     // CORRECT ANSWER
-    if (questionsState[0].answers[radioSelection] === questionsState[0].correctAnswer && !wrongAnswer) {
-      clearRadioBtn(radioSelection);
-      handleBgColor(radioSelection, '');
-      // update score
-      currentState[0].score++
-      currentState[0].correctCt++
-      currentState[0].viewCt++ // iterate the question's rotation
+    if (questionsState[0].answers[radioState] === questionsState[0].correctAnswer && !wrongAnswer) {
+      clearRadioBtn(radioState);
+      handleBgColor(radioState, '');
+      // update score and iterate question's appearence
+      setQuestionsState({
+        questionsState: {
+          ...questionsState[0], score: questionsState.score + 1, correctCt: questionsState.correctCt + 1, viewCt: questionsState.viewCt + 1
+        }
+      })
       // add to progress state
       let storageArr = [];
       if (storageClone.length > 0) storageArr = storageClone;
-      storageArr.push(currentState[0]);
+      storageArr.push(questionsState[0]);
       setStorageClone(storageArr);
       // copy and modify state array with the question removed (if correct)
-      let newQuestionSet = currentState.splice(1, currentState.length - 1);
+      let newQuestionSet = questionsState.splice(1, questionsState.length - 1);
       if (newQuestionSet.length === 0) endSession()
       else setQuestionsState(newQuestionSet)
     }
     // CORRECT BUT NOT ON THE FIRST SELECTION (CONSIDERED A MISS)
-    else if (questionsState[0].answers[radioSelection] === questionsState[0].correctAnswer && wrongAnswer) {
+    else if (questionsState[0].answers[radioState] === questionsState[0].correctAnswer && wrongAnswer) {
       setWrongAnswer(false); // removes this tag for keeping score
-      clearRadioBtn(radioSelection); // reset button selection
-      handleBgColor(radioSelection, ''); // reset answer bg color
-      let currentState = questionsState;
-      currentState[0].viewCt++ // iterate the question's rotation
-      if (questionsState.length > 1) currentState.push(currentState.splice(0, 1)[0]); // puts question to back of queue
+      clearRadioBtn(radioState); // reset button selection
+      handleBgColor(radioState, ''); // reset answer bg color
+      let questionsState = questionsState;
+      questionsState[0].viewCt++ // iterate the question's rotation
+      if (questionsState.length > 1) questionsState.push(questionsState.splice(0, 1)[0]); // puts question to back of queue
       else {
         let storageArr = [];
         if (storageClone.length > 0) storageArr = storageClone;
-        storageArr.push(currentState[0]);
+        storageArr.push(questionsState[0]);
         setStorageClone(storageArr);
         endSession()
       }
@@ -82,11 +82,11 @@ const Question = ({ questionsState, setQuestionsState, storageClone, setStorageC
     // WRONG ANSWER (CANNOT ADVANCE)
     else {
       setWrongAnswer(true); // marked for scoring
-      let currentState = questionsState;
-      currentState[0].wrongCt++
-      let currentScore = currentState[0].score; // update score for this question
-      if (currentScore > 0) currentState[0].score--;
-      handleBgColor(radioSelection, '#FFCCCB');
+      let questionsState = questionsState;
+      questionsState[0].wrongCt++
+      let currentScore = questionsState[0].score; // update score for this question
+      if (currentScore > 0) questionsState[0].score--;
+      handleBgColor(radioState, '#FFCCCB');
     }
   }
 
@@ -131,7 +131,7 @@ const Question = ({ questionsState, setQuestionsState, storageClone, setStorageC
         </Container></Form>
 
         <Card.Footer className='text-muted'>
-          <Button type='submit' onClick={submitAnswer} disabled={btnDisabled}>Continue</Button>
+          <Button type='submit' onClick={() => submitAnswer} disabled={btnDisabled}>Continue</Button>
         </Card.Footer>
       </Card >
     </Container>
