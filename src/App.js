@@ -55,8 +55,8 @@ const App = () => {
             />
             : !session ? <Quote quote={quote} /> : null}
         </Container>
-      </div>)
-    </Router>
+      </div>
+    </Router>)
 };
 
 export default App
