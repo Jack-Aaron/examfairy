@@ -25,11 +25,11 @@ const Question = ({ questionsState, setQuestionsState, storageClone, setStorageC
         .style['backgroundColor'] = color
   }
   const handleRadio = e => {
-    let radioState = e.target.value;
-    setRadioState(radioState);
+    let beRadioState = e.target.value;
+    setRadioState(beRadioState);
     setBtnDisabled(false); // submit button activates
     for (let i = 0; i < 4; i++) { handleBgColor(i, '') } // resets colors
-    handleBgColor(radioState, '#EFFBFF') // changes current selection
+    handleBgColor(beRadioState, '#EFFBFF') // changes current selection
   }
   const [btnDisabled, setBtnDisabled] = useState(true);
   const [wrongAnswer, setWrongAnswer] = useState(false); // determines logic flow later
@@ -41,12 +41,14 @@ const Question = ({ questionsState, setQuestionsState, storageClone, setStorageC
 
   // user submits answer on question card
   const submitAnswer = () => {
+    console.log('poop');
+    let beRadioState = radioState;
     setHintState(false);
     setBtnDisabled(true);
     // CORRECT ANSWER
-    if (questionsState[0].answers[radioState] === questionsState[0].correctAnswer && !wrongAnswer) {
-      clearRadioBtn(radioState);
-      handleBgColor(radioState, '');
+    if (questionsState[0].answers[beRadioState] === questionsState[0].correctAnswer && !wrongAnswer) {
+      clearRadioBtn(beRadioState);
+      handleBgColor(beRadioState, '');
       // update score and iterate question's appearence
       setQuestionsState({
         questionsState: {
@@ -64,10 +66,10 @@ const Question = ({ questionsState, setQuestionsState, storageClone, setStorageC
       else setQuestionsState(newQuestionSet)
     }
     // CORRECT BUT NOT ON THE FIRST SELECTION (CONSIDERED A MISS)
-    else if (questionsState[0].answers[radioState] === questionsState[0].correctAnswer && wrongAnswer) {
+    else if (questionsState[0].answers[beRadioState] === questionsState[0].correctAnswer && wrongAnswer) {
       setWrongAnswer(false); // removes this tag for keeping score
-      clearRadioBtn(radioState); // reset button selection
-      handleBgColor(radioState, ''); // reset answer bg color
+      clearRadioBtn(beRadioState); // reset button selection
+      handleBgColor(beRadioState, ''); // reset answer bg color
       let questionsState = questionsState;
       questionsState[0].viewCt++ // iterate the question's rotation
       if (questionsState.length > 1) questionsState.push(questionsState.splice(0, 1)[0]); // puts question to back of queue
@@ -131,7 +133,7 @@ const Question = ({ questionsState, setQuestionsState, storageClone, setStorageC
         </Container></Form>
 
         <Card.Footer className='text-muted'>
-          <Button type='submit' onClick={() => submitAnswer} disabled={btnDisabled}>Continue</Button>
+          <Button type='submit' onClick={submitAnswer} disabled={btnDisabled}>Continue</Button>
         </Card.Footer>
       </Card >
     </Container>
