@@ -6,7 +6,8 @@ import Card from 'react-bootstrap/Card';
 import AnswerGrid from '../AnswerGrid';
 import './style.css';
 
-const Question = ({ questionsState, setQuestionsState, storageClone, setStorageClone, endSession }) => {
+const Question = ({ questionsState, setQuestionsState, storageClone, setStorageClone, endSession, wrongAnswer, setWrongAnswer }) => {
+  // ** STATE **
   // manages hint display and mouse cursor
   const [hintState, setHintState] = useState(false);
   const toggleHint = () => setHintState(true);
@@ -14,6 +15,9 @@ const Question = ({ questionsState, setQuestionsState, storageClone, setStorageC
   const toggleIsHovering = () => setIsHovering(!isHovering);
   // manages radio button control
   const [radioState, setRadioState] = useState();
+    // strikeout bad answer effects for users
+  const [btnDisabled, setBtnDisabled] = useState(true);
+  // **FUNCTIONS**
   const clearRadioBtn = (tag) =>
     // console.log(document.getElementById('inline-radio-' + tag).checked === false)
     document.getElementById('inline-radio-' + tag).checked = false;
@@ -31,15 +35,11 @@ const Question = ({ questionsState, setQuestionsState, storageClone, setStorageC
     for (let i = 0; i < 4; i++) { handleBgColor(i, '') } // resets colors
     handleBgColor(beRadioState, '#EFFBFF') // changes current selection
   }
-  const [btnDisabled, setBtnDisabled] = useState(true);
-  const [wrongAnswer, setWrongAnswer] = useState(false); // determines logic flow later
-  // strikeout bad answer effects for users
   const toggleStrikethrough = (tag) => {
     if (document.getElementById(tag).style['text-decoration'] === 'none') document.getElementById(tag).style['text-decoration'] = 'line-through'
     else document.getElementById(tag).style['text-decoration'] = 'none'
   }
-
-  // user submits answer on question card
+  // USER submits answer on question card  = >
   const submitAnswer = () => {
     console.log('poop');
     let beRadioState = radioState;
@@ -70,13 +70,13 @@ const Question = ({ questionsState, setQuestionsState, storageClone, setStorageC
       setWrongAnswer(false); // removes this tag for keeping score
       clearRadioBtn(beRadioState); // reset button selection
       handleBgColor(beRadioState, ''); // reset answer bg color
-      let questionsState = questionsState;
-      questionsState[0].viewCt++ // iterate the question's rotation
-      if (questionsState.length > 1) questionsState.push(questionsState.splice(0, 1)[0]); // puts question to back of queue
+      let borrowQuestionsState = questionsState;
+      borrowQuestionsState[0].viewCt++ // iterate the question's rotation
+      if (borrowQuestionsState.length > 1) borrowQuestionsState.push(borrowQuestionsState.splice(0, 1)[0]); // puts question to back of queue
       else {
         let storageArr = [];
         if (storageClone.length > 0) storageArr = storageClone;
-        storageArr.push(questionsState[0]);
+        storageArr.push(borrowQuestionsState[0]);
         setStorageClone(storageArr);
         endSession()
       }
@@ -84,10 +84,10 @@ const Question = ({ questionsState, setQuestionsState, storageClone, setStorageC
     // WRONG ANSWER (CANNOT ADVANCE)
     else {
       setWrongAnswer(true); // marked for scoring
-      let questionsState = questionsState;
-      questionsState[0].wrongCt++
-      let currentScore = questionsState[0].score; // update score for this question
-      if (currentScore > 0) questionsState[0].score--;
+      let borrowQuestionsState = questionsState;
+      borrowQuestionsState[0].wrongCt++
+      let currentScore = borrowQuestionsState[0].score; // update score for this question
+      if (currentScore > 0) borrowQuestionsState[0].score--;
       handleBgColor(radioState, '#FFCCCB');
     }
   }
