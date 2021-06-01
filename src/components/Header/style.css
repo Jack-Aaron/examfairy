@@ -1,11 +1,9 @@
-/* down */
-.display-1 {
+.down {
   color: #FEB5C0;
   text-shadow: 0px 3px 3px #feeef5bd,
   -1px 0px 3px #6c4d52be;
 }
-/* up */
-.display-1 {
+.up {
   color: #FEBFC9;
   text-shadow: 0px 2px 3px #32201E,
   -1px 0px 3px #6C4D52;

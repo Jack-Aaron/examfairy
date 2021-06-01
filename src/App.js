@@ -13,6 +13,7 @@ const App = () => {
   // prepare questions & answers and set states
   const [quote, setQuote] = useState()
   const [questionsState, setQuestionsState] = useState()
+  const [wrongAnswer, setWrongAnswer] = useState(false); // determines logic flow later
 
   useEffect(() => {
     fetch("https://type.fit/api/quotes") // https://bit.ly/3okopkK
@@ -45,11 +46,15 @@ const App = () => {
     <Router>
       <div className='App'>
         {questionsState !== undefined && session ?
-          <Header questionsState={questionsState} /> : null}
+          <Header questionsState={questionsState} 
+          wrongAnswer={wrongAnswer}
+          setWrongAnswer={setWrongAnswer} /> : null}
         <Container>
           {questionsState !== undefined && session ?
             <Question questionsState={questionsState}
               setQuestionsState={setQuestionsState}
+              wrongAnswer={wrongAnswer}
+              setWrongAnswer={setWrongAnswer}
               storageClone={storageClone} setStorageClone={setStorageClone}
               endSession={endSession} shuffle={shuffle}
             />

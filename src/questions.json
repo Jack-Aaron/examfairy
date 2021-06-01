@@ -186,5 +186,1024 @@
     "wrongCt": "0",
     "score": "2",
     "subquestion": ""
+  },
+  {
+    "id": "ab",
+    "question": "Max's teacher wrote the following directions on the board: \"First, take out a pencil. Then, write your name at the top of your paper. Write the date on your paper in the top right-hand corner. Then, number your paper one through ten. when you are finished, raise your hand.\"",
+    "answers": [
+      "write his name at the top of his paper",
+      "take out a pencil",
+      "raise his hand",
+      "number his paper one to through ten"
+    ],
+    "correctAnswer": "number his paper one to through ten",
+    "topic": "English",
+    "TEKS": "1b",
+    "hint": "",
+    "viewCt": "0",
+    "correctCt": "0",
+    "wrongCt": "0",
+    "score": "2",
+    "subquestion": "What will Max do after he writes the date on his paper?"
+  },
+  {
+    "id": "ac",
+    "question": "Which of the following is the correct way to read the word \"trample\"?",
+    "answers": [
+      "tra-mpel",
+      "tramp-le",
+      "tram-pel",
+      "tra-mp-le"
+    ],
+    "correctAnswer": "tram-pel",
+    "topic": "English",
+    "TEKS": "2b",
+    "hint": "",
+    "viewCt": "0",
+    "correctCt": "0",
+    "wrongCt": "0",
+    "score": "2",
+    "subquestion": ""
+  },
+  {
+    "id": "ad",
+    "question": "Which of the following words would be the best caption for a picture of jumping dolphins?",
+    "answers": [
+      "brave",
+      "baby",
+      "beautiful",
+      "breath"
+    ],
+    "correctAnswer": "beautiful",
+    "topic": "English",
+    "TEKS": "2b",
+    "hint": "",
+    "viewCt": "0",
+    "correctCt": "0",
+    "wrongCt": "0",
+    "score": "2",
+    "subquestion": ""
+  },
+  {
+    "id": "ae",
+    "question": "Rob wants to write the word \"courageous\" on his picture display.",
+    "answers": [
+      "city and curious",
+      "cat and corn",
+      "bath and bountiful",
+      "dust and duty"
+    ],
+    "correctAnswer": "city and curious",
+    "topic": "English",
+    "TEKS": [
+      "2d",
+      "3a"
+    ],
+    "hint": "",
+    "viewCt": "0",
+    "correctCt": "0",
+    "wrongCt": "0",
+    "score": "2",
+    "subquestion": "Between which two words would he find the correct spelling in a dictionary?"
+  },
+  {
+    "id": "af",
+    "question": "If \"The Three Little Pigs\" was written as a reader's theater script, how would the author show what the wolf and the first little pig needed to say?",
+    "answers": [
+      "Wolf: Little Pig, Little pig, let me come in. First Little Pig: Not by the hair of my chinny-chin-chin!",
+      "\"Little Pig, Little Pig, let me come in,\" yelled the wolf. \"Not by the hair of my chinny-chin-chin!\" replied the first little pig.",
+      "The wolf demanded that the pig let him come into the house, but the little pig would not open the door.",
+      "The wolf said, Little Pig, Little Pig, let me come in, but the little pig refused to let him inside the house."
+    ],
+    "correctAnswer": "Wolf: Little Pig, Little pig, let me come in.\n First Little Pig: Not by the hair of my chinny-chin-chin!",
+    "topic": "English",
+    "TEKS": "9c",
+    "hint": "",
+    "viewCt": "0",
+    "correctCt": "0",
+    "wrongCt": "0",
+    "score": "2",
+    "subquestion": ""
+  },
+  {
+    "id": "b0",
+    "question": "Why might the author have used the words \"huff\" and \"puff\" when the wolf says he will blow down the house?",
+    "answers": [
+      "The space between the words shows where the wolf would take a breath.",
+      "The shape of the words on the page is like a big puff of wind.",
+      "The rhythm of two short words make it sound like the wolf is out of breath.",
+      "Repeating the \"uff\" sound makes it sound as if the wolf is blowing."
+    ],
+    "correctAnswer": "Repeating the \"uff\" sound makes it sound as if the wolf is blowing.",
+    "topic": "English",
+    "TEKS": [
+      "10a",
+      "10f"
+    ],
+    "hint": "",
+    "viewCt": "0",
+    "correctCt": "0",
+    "wrongCt": "0",
+    "score": "2",
+    "subquestion": ""
+  },
+  {
+    "id": "b1",
+    "question": "If you were acting out the part of the wolf, what might you do after blowing on the house made of bricks?",
+    "answers": [
+      "take a nap because all that huffing and puffing made you very sleepy",
+      "stomp your feet because you could not knock down the house",
+      "sit under a tree because you decided to wait for the pig to leave his house",
+      "shrug your shoulders and walk away because you gave up"
+    ],
+    "correctAnswer": "stomp your feet because you could not knock down the house",
+    "topic": "English",
+    "TEKS": [
+      "8b",
+      "9c"
+    ],
+    "hint": "",
+    "viewCt": "0",
+    "correctCt": "0",
+    "wrongCt": "0",
+    "score": "2",
+    "subquestion": ""
+  },
+  {
+    "id": "b2",
+    "question": "(1) I went to the pet store. (2) My mom let me buy a mouse and a fancy cage. (3) I set up the cage after I got home I put the mouse inside. (4) I put some _____ in the cage for the mouse to eat. (5) I named my mouse Fluffy. (6) I love my mouse!",
+    "answers": [
+      "My mom let me buy a tiny gray mouse and a fancy cage.",
+      "My sweet mom let me buy a mouse and a fancy cage.",
+      "My mom let me buy a mouse with two ears and a tail and a cage.",
+      "My mom let me buy a mouse and a cage."
+    ],
+    "correctAnswer": "My mom let me buy a tiny gray mouse and a fancy cage.",
+    "topic": "English",
+    "TEKS": "11c",
+    "hint": "",
+    "viewCt": "0",
+    "correctCt": "0",
+    "wrongCt": "0",
+    "score": "2",
+    "subquestion": "Which of the following would be the BEST way for Nick to rewrite sentence 2 to help the reader picture the story?"
+  },
+  {
+    "id": "b3",
+    "question": "(1) I went to the pet store. (2) My mom let me buy a mouse and a fancy cage. (3) I set up the cage after I got home I put the mouse inside. (4) I put some _____ in the cage for the mouse to eat. (5) I named my mouse Fluffy. (6) I love my mouse!",
+    "answers": [
+      "Change \"inside\" to \"outside\"",
+      "Add a period after \"home\"",
+      "Change \"after\" to \"before\"",
+      "Delete the word \"set\""
+    ],
+    "correctAnswer": "Add a period after \"home\"",
+    "topic": "English",
+    "TEKS": "11d",
+    "hint": "",
+    "viewCt": "0",
+    "correctCt": "0",
+    "wrongCt": "0",
+    "score": "2",
+    "subquestion": "Which of the following is the BEST change to make in sentence 3?"
+  },
+  {
+    "id": "b4",
+    "question": "(1) I went to the pet store. (2) My mom let me buy a mouse and a fancy cage. (3) I set up the cage after I got home I put the mouse inside. (4) I put some _____ in the cage for the mouse to eat. (5) I named my mouse Fluffy. (6) I love my mouse!",
+    "answers": [
+      "can and captain",
+      "cedar and center",
+      "chap and city",
+      "cleat and coin"
+    ],
+    "correctAnswer": "chap and city",
+    "topic": "English",
+    "TEKS": [
+      "2d",
+      "3a"
+    ],
+    "hint": "",
+    "viewCt": "0",
+    "correctCt": "0",
+    "wrongCt": "0",
+    "score": "2",
+    "subquestion": "Nick left a blank in the story. He wants to add the word CHEESE, but he is not sure how to spell it. Between which two guide words should Nick look for the word in his dictionary?"
+  },
+  {
+    "id": "b5",
+    "question": "Mia's class wanted to learn about trees. While they were researching, they noticed squirrels running up the side of the trees on their playground.",
+    "answers": [
+      "What are trees?",
+      "How do trees help animals?",
+      "What items do we use that are made from trees?",
+      "How can people take care of the trees around them?"
+    ],
+    "correctAnswer": "How do trees help animals?",
+    "topic": "English",
+    "TEKS": "13a",
+    "hint": "",
+    "viewCt": "0",
+    "correctCt": "0",
+    "wrongCt": "0",
+    "score": "2",
+    "subquestion": "What would be a new question for them to research?"
+  },
+  {
+    "id": "b6",
+    "question": "Chapter 1: Parts of a Tree | Chapter 2: Kinds of Trees | Chapter 3: A Tree is a Home | Chapter 4: People Use Trees | Chapter 5: Planting Trees | Chapter 6: Fun Facts About Trees",
+    "answers": [
+      "Chapter 1, because it will have labeled diagrams of trees in different seasons",
+      "Chapter 2, because it will tell about different kinds of animals that live in or near trees",
+      "Chapter 3, because it will describe different kinds of houses people build out of wood",
+      "Chapter 6, because it will list steps for making differnt items out of wood"
+    ],
+    "correctAnswer": "Chapter 2, because it will tell about different kinds of animals that live in or near trees",
+    "topic": "English",
+    "TEKS": "11d",
+    "hint": "There are different kinds of trees just like there are different kinds of animals.",
+    "viewCt": "0",
+    "correctCt": "0",
+    "wrongCt": "0",
+    "score": "2",
+    "subquestion": "Which Chapter from this book would help Mia's class answer their question?"
+  },
+  {
+    "id": "b7",
+    "question": "Which is an example of a safe practice during an outdoor pond investigation?",
+    "answers": [
+      "Wearing goggles to protect your eyes from splashing liquids",
+      "Pushing in your chair before lining up, so others do not get hurt",
+      "Picking up an animal you found nearby, so your class can have a class pet",
+      "Recording your observations, so your class can share what they discovered"
+    ],
+    "correctAnswer": "Wearing goggles to protect your eyes from splashing liquids",
+    "topic": "Science",
+    "TEKS": [
+      "1a",
+      "1b"
+    ],
+    "hint": "",
+    "viewCt": "0",
+    "correctCt": "0",
+    "wrongCt": "0",
+    "score": "2",
+    "subquestion": ""
+  },
+  {
+    "id": "b8",
+    "question": "There is a drought in Tony's community. Which is the BEST action Tony might take to prevent a future problem his community might experience due to the drought?",
+    "answers": [
+      "Using the dishwasher, instead of washing the dishes by hand",
+      "Taking shorter showers in the morning, so he can conserve water",
+      "Taking plastic bottles and metal to the recylcing center, so they can be recycled",
+      "Watering the lawn twice a week, instead of once a week, so the grass will grow taller"
+    ],
+    "correctAnswer": "Using the dishwasher, instead of washing the dishes by hand",
+    "topic": "Science",
+    "TEKS": [
+      "1b",
+      "3a"
+    ],
+    "hint": "",
+    "viewCt": "0",
+    "correctCt": "0",
+    "wrongCt": "0",
+    "score": "2",
+    "subquestion": ""
+  },
+  {
+    "id": "b9",
+    "question": "Samantha's mother made pancakes for breakfast. While they were still warm, Samantha placed a piece of butter on top of her pancake.",
+    "answers": [
+      "The butter will evaporate, because heat was added.",
+      "The butter will melt and change states, because heat was added.",
+      "There will be no change in the butter, because solids do not change states.",
+      "The pancake will become cool, because the cold butter was placed on top."
+    ],
+    "correctAnswer": "The butter will melt and change states, because heat was added.",
+    "topic": "Science",
+    "TEKS": [
+      "5c",
+      "6a"
+    ],
+    "hint": "",
+    "viewCt": "0",
+    "correctCt": "0",
+    "wrongCt": "0",
+    "score": "2",
+    "subquestion": "Which best describes what Samanatha observed next and why?"
+  },
+  {
+    "id": "ba",
+    "question": "When combined, which material could be used to build a dog house?",
+    "answers": [
+      "Wood and tape, because the tape is strong enough to hold the heavy wood together.",
+      "Wood and plastic, because both amterials are natural resources that can easily be found.",
+      "Wood and metal, because the nails are strong enough to hold the hard wood together.",
+      "Tape and fabric, because the tape is sticky enough to hold the colorful fabric in place."
+    ],
+    "correctAnswer": "Wood and metal, because the nails are strong enough to hold the hard wood together.",
+    "topic": "Science",
+    "TEKS": [
+      "5a",
+      "5d"
+    ],
+    "hint": "",
+    "viewCt": "0",
+    "correctCt": "0",
+    "wrongCt": "0",
+    "score": "2",
+    "subquestion": ""
+  },
+  {
+    "id": "bb",
+    "question": "Which of the following shapes shows the path of a marble rolling down a flight of stairs?",
+    "answers": [
+      "/",
+      "-",
+      "|",
+      "o"
+    ],
+    "correctAnswer": "/",
+    "topic": "Science",
+    "TEKS": "6c",
+    "hint": "",
+    "viewCt": "0",
+    "correctCt": "0",
+    "wrongCt": "0",
+    "score": "2",
+    "subquestion": ""
+  },
+  {
+    "id": "bc",
+    "question": "How does the movement of a marble differ from the movement of a chair on tile when force is applied?",
+    "answers": [
+      "A marble will slide and a chair will roll.",
+      "A marble will roll and a chair will slide.",
+      "A marble will spin and a chair will slide.",
+      "A marble will spin and a chair will not move at all."
+    ],
+    "correctAnswer": "A marble will roll and a chair will slide.",
+    "topic": "Science",
+    "TEKS": "6c",
+    "hint": "",
+    "viewCt": "0",
+    "correctCt": "0",
+    "wrongCt": "0",
+    "score": "2",
+    "subquestion": ""
+  },
+  {
+    "id": "bd",
+    "question": "Mikayla found today's weather predictions in the newspaper: \"High Temp - 82. Wind - 25 mph. Rainfall: 0 inches.\"",
+    "answers": [
+      "Fly a kite at the park, because it is windy.",
+      "Take her umbrella to school, beacuse it will most likely rain.",
+      "Go to the outdoor ice skating rink, because of the cool temperature.",
+      "Wear a scarf and gloves, beacuse the temperature is below freezing."
+    ],
+    "correctAnswer": "Fly a kite at the park, because it is windy.",
+    "topic": "Science",
+    "TEKS": "8b",
+    "hint": "",
+    "viewCt": "0",
+    "correctCt": "0",
+    "wrongCt": "0",
+    "score": "2",
+    "subquestion": "Which is an example of an activity Mikayla might do based on today's weather conditions?"
+  },
+  {
+    "id": "be",
+    "question": "\"Group A: piece of wood, soil, plant\" | \"Group B: toy car, tennis ball, pencil box\"",
+    "answers": [
+      "Group A are objects that can be reused, and Group B are objects that are made out of wood.",
+      "Group A are objects that are manmade resources, and Group B are objects that are natural resources.",
+      "Group A are objects that are natural resources, and Group B are objects that are manmade resources.",
+      "Group A are objects that are only used by animals, and Group B are objects that are used by only humans."
+    ],
+    "correctAnswer": "Group A are objects that are natural resources, and Group B are objects that are manmade resources.",
+    "topic": "Science",
+    "TEKS": "7c",
+    "hint": "",
+    "viewCt": "0",
+    "correctCt": "0",
+    "wrongCt": "0",
+    "score": "2",
+    "subquestion": "What BEST describes how these objects were sorted?"
+  },
+  {
+    "id": "bf",
+    "question": "As Jackson was riding the bus to school, he observed fog outside the window.",
+    "answers": [
+      "Fog is tiny droplets of water floating in the air; this is an example of precipitation.",
+      "Fog is water that falls from the sky and collects on the ground.",
+      "Fog is tiny droplets of water floating in the air; this is an example of condensation.",
+      "Fog is dust particles that float in the air after something is cleaned."
+    ],
+    "correctAnswer": "Fog is tiny droplets of water floating in the air; this is an example of condensation.",
+    "topic": "Science",
+    "TEKS": "8c",
+    "hint": "The fog was on the window.",
+    "viewCt": "0",
+    "correctCt": "0",
+    "wrongCt": "0",
+    "score": "2",
+    "subquestion": "which statement BEST describes how fog relates to the water cycle?"
+  },
+  {
+    "id": "c0",
+    "question": "Consider the physical characteristics of a flower.",
+    "answers": [
+      "The leaves collect water and nutrients from the soil.",
+      "The stem of the plant absorbs sunlight in order to make energy for the flower.",
+      "The stem of the plant holds the plant up and carries water and nutrients to the flower.",
+      "The roots of the flower attracts insects and animals that will help the flower reproduce."
+    ],
+    "correctAnswer": "The stem of the plant holds the plant up and carries water and nutrients to the flower.",
+    "topic": "Science",
+    "TEKS": "10b",
+    "hint": "",
+    "viewCt": "0",
+    "correctCt": "0",
+    "wrongCt": "0",
+    "score": "2",
+    "subquestion": "Which correctly identifies a part of the plant and its function?"
+  },
+  {
+    "id": "c1",
+    "question": "Which is an example of an environmental change that can influence the behavior of an organism?",
+    "answers": [
+      "The increase in precipitation will cause trees to die.",
+      "The increase in predators will cause the rabbit population to increase.",
+      "The decrease in the temperature will cause bears to hibernate in the winter.",
+      "The removal of a bee hive will cause more flowers to grow in a community."
+    ],
+    "correctAnswer": "The decrease in the temperature will cause bears to hibernate in the winter.",
+    "topic": "Science",
+    "TEKS": "9b",
+    "hint": "",
+    "viewCt": "0",
+    "correctCt": "0",
+    "wrongCt": "0",
+    "score": "2",
+    "subquestion": ""
+  },
+  {
+    "id": "c2",
+    "question": "Who is Irma Rangel?",
+    "answers": [
+      "An important woman educator.",
+      "The first African American judge.",
+      "The first woman to serve in Congress.",
+      "An important Mexican American state legislator."
+    ],
+    "correctAnswer": "An important Mexican American state legislator.",
+    "topic": "Social Studies",
+    "TEKS": "2a",
+    "hint": "",
+    "viewCt": "0",
+    "correctCt": "0",
+    "wrongCt": "0",
+    "score": "2",
+    "subquestion": ""
+  },
+  {
+    "id": "c3",
+    "question": "What is the significance of the WWII memorial in Washington, D.C.?",
+    "answers": [
+      "It is a tourist attraction.",
+      "It is the largest memorial in North America.",
+      "It is a way to learn about all the wars in history.",
+      "It honors veterans of the military during an important historical period."
+    ],
+    "correctAnswer": "It honors veterans of the military during an important historical period.",
+    "topic": "Social Studies",
+    "TEKS": "1b",
+    "hint": "",
+    "viewCt": "0",
+    "correctCt": "0",
+    "wrongCt": "0",
+    "score": "2",
+    "subquestion": ""
+  },
+  {
+    "id": "c4",
+    "question": "Which continent has Canada?",
+    "answers": [
+      "Africa",
+      "Europe",
+      "North America",
+      "South America"
+    ],
+    "correctAnswer": "North America",
+    "topic": "Social Studies",
+    "TEKS": [
+      "3a",
+      "4a"
+    ],
+    "hint": "",
+    "viewCt": "0",
+    "correctCt": "0",
+    "wrongCt": "0",
+    "score": "2",
+    "subquestion": ""
+  },
+  {
+    "id": "c5",
+    "question": "Which is NOT a reason why people live near bodies of water?",
+    "answers": [
+      "for recreation",
+      "for drinking water",
+      "in order to avoid floods",
+      "in order to generate electricity"
+    ],
+    "correctAnswer": "in order to avoid floods",
+    "topic": "Social Studies",
+    "TEKS": "5a",
+    "hint": "",
+    "viewCt": "0",
+    "correctCt": "0",
+    "wrongCt": "0",
+    "score": "2",
+    "subquestion": ""
+  },
+  {
+    "id": "c6",
+    "question": "What is income?",
+    "answers": [
+      "an entrance",
+      "a way to make money",
+      "the money one receives for work",
+      "the money paid to the government"
+    ],
+    "correctAnswer": "the money one receives for work",
+    "topic": "Social Studies",
+    "TEKS": "6a",
+    "hint": "",
+    "viewCt": "0",
+    "correctCt": "0",
+    "wrongCt": "0",
+    "score": "2",
+    "subquestion": ""
+  },
+  {
+    "id": "c7",
+    "question": "Jerry produces pencils in his factory. Which word best describes Jerry's role when he purchase pencils in a store.",
+    "answers": [
+      "buyer",
+      "producer",
+      "consumer",
+      "pencil owner"
+    ],
+    "correctAnswer": "consumer",
+    "topic": "Social Studies",
+    "TEKS": [
+      "7a",
+      "7b"
+    ],
+    "hint": "",
+    "viewCt": "0",
+    "correctCt": "0",
+    "wrongCt": "0",
+    "score": "2",
+    "subquestion": ""
+  },
+  {
+    "id": "c8",
+    "question": "What is the role of congress?",
+    "answers": [
+      "make laws",
+      "manage conflict",
+      "lead the country",
+      "protect the citizens"
+    ],
+    "correctAnswer": "make laws",
+    "topic": "Social Studies",
+    "TEKS": "8a",
+    "hint": "",
+    "viewCt": "0",
+    "correctCt": "0",
+    "wrongCt": "0",
+    "score": "2",
+    "subquestion": ""
+  },
+  {
+    "id": "c9",
+    "question": "Which BEST explains why schools are valuable to a communnity?",
+    "answers": [
+      "They give parents a break.",
+      "They offer a free education to all citizens.",
+      "They are a positive way to spend tax dollars.",
+      "They are a place kids can hang out during the day."
+    ],
+    "correctAnswer": "They offer a free education to all citizens.",
+    "topic": "Social Studies",
+    "TEKS": "8b",
+    "hint": "",
+    "viewCt": "0",
+    "correctCt": "0",
+    "wrongCt": "0",
+    "score": "2",
+    "subquestion": ""
+  },
+  {
+    "id": "ca",
+    "question": "Carey reads the newspaper each day to learn about local community events. She also votes in every election.",
+    "answers": [
+      "ignore the laws",
+      "avoid community service",
+      "respectfully hold public officials to their word",
+      "throw big parties and invite the whole neighborhood"
+    ],
+    "correctAnswer": "respectfully hold public officials to their word",
+    "topic": "Social Studies",
+    "TEKS": [
+      "10a",
+      "10c"
+    ],
+    "hint": "",
+    "viewCt": "0",
+    "correctCt": "0",
+    "wrongCt": "0",
+    "score": "2",
+    "subquestion": "What is something else Carey could do to exemplify good citizenship?"
+  },
+  {
+    "id": "cb",
+    "question": "Which of the following the NATIONAL flower of the United States?",
+    "answers": [
+      "rose",
+      "daisy",
+      "poppy",
+      "bluebonnet"
+    ],
+    "correctAnswer": "rose",
+    "topic": "Social Studies",
+    "TEKS": "11c",
+    "hint": "",
+    "viewCt": "0",
+    "correctCt": "0",
+    "wrongCt": "0",
+    "score": "2",
+    "subquestion": ""
+  },
+  {
+    "id": "cc",
+    "question": "How do statues honor the local heritage of a community?",
+    "answers": [
+      "They teach history to tourists.",
+      "They are an important bird habitat.",
+      "They look nice in parks and town squares.",
+      "They publicly acknowledge important community members."
+    ],
+    "correctAnswer": "They publicly acknowledge important community members.",
+    "topic": "Social Studies",
+    "TEKS": "12a",
+    "hint": "",
+    "viewCt": "0",
+    "correctCt": "0",
+    "wrongCt": "0",
+    "score": "2",
+    "subquestion": ""
+  },
+  {
+    "id": "cd",
+    "question": "Why do Chinese Americans celebrate the Chinese New Year in the United States?",
+    "answers": [
+      "to have big parties",
+      "to honor their cultural heritage",
+      "because they want a reason to eat traditional foods",
+      "because they won't celebrate the New Year on January 1"
+    ],
+    "correctAnswer": "to honor their cultural heritage",
+    "topic": "Social Studies",
+    "TEKS": "12a",
+    "hint": "",
+    "viewCt": "0",
+    "correctCt": "0",
+    "wrongCt": "0",
+    "score": "2",
+    "subquestion": ""
+  },
+  {
+    "id": "ce",
+    "question": "In what way has technology changed transportation?",
+    "answers": [
+      "More people can ride together.",
+      "We use metal signs to remind us to stop or yield.",
+      "All rowboats have been changed into motorboats.",
+      "GPS maps help people not get lost when traveling."
+    ],
+    "correctAnswer": "GPS maps help people not get lost when traveling.",
+    "topic": "Social Studies",
+    "TEKS": "13a",
+    "hint": "",
+    "viewCt": "0",
+    "correctCt": "0",
+    "wrongCt": "0",
+    "score": "2",
+    "subquestion": ""
+  },
+  {
+    "id": "cf",
+    "question": "How has science changed the way people meet their basic needs?",
+    "answers": [
+      "Science makes it harder to create shelters.",
+      "Science makes it easier to play games online.",
+      "Advances in science make it easier to watch movies at home.",
+      "Advances in science make water accessible to people who live in dry regions."
+    ],
+    "correctAnswer": "Advances in science make water accessible to people who live in dry regions.",
+    "topic": "Social Studies",
+    "TEKS": "13b",
+    "hint": "",
+    "viewCt": "0",
+    "correctCt": "0",
+    "wrongCt": "0",
+    "score": "2",
+    "subquestion": ""
+  },
+  {
+    "id": "d0",
+    "question": "70 more people visited the zoo on Saturday than on Friday. Seven hundred and forty people visited on Friday.",
+    "answers": [
+      "700",
+      "740",
+      "810",
+      "840"
+    ],
+    "correctAnswer": "810",
+    "topic": "Math",
+    "TEKS": [
+      "2a",
+      "2f",
+      "4c"
+    ],
+    "hint": "",
+    "viewCt": "0",
+    "correctCt": "0",
+    "wrongCt": "0",
+    "score": "2",
+    "subquestion": "How many people visited the zoo on Saturday?"
+  },
+  {
+    "id": "d1",
+    "question": "Which fraction is best represented by this pattern:",
+    "answers": [
+      "One-eighth",
+      "Seven-eighths",
+      "One and one-fourth",
+      "One and three-fourths"
+    ],
+    "correctAnswer": "One and three-fourths",
+    "topic": "Math",
+    "TEKS": [
+      "3a",
+      "3c"
+    ],
+    "hint": "",
+    "viewCt": "0",
+    "correctCt": "0",
+    "wrongCt": "0",
+    "score": "2",
+    "subquestion": "- o o o | o o o o"
+  },
+  {
+    "id": "d2",
+    "question": "Noah picks bushels of apples on Saturday. Each bushel holds 5 apples.",
+    "answers": [
+      "4",
+      "14",
+      "40",
+      "45"
+    ],
+    "correctAnswer": "45",
+    "topic": "Math",
+    "TEKS": "6a",
+    "hint": "",
+    "viewCt": "0",
+    "correctCt": "0",
+    "wrongCt": "0",
+    "score": "2",
+    "subquestion": "If Noah picks 9 bushels of apples, how many apples did Noah pick altogether?"
+  },
+  {
+    "id": "d3",
+    "question": "Julie and Nina each have the same number of blocks - 55.",
+    "answers": [
+      "The total will be odd because 55 is an odd number.",
+      "The total will be odd because joining two odd numbers results in an odd number.",
+      "The total will be even because joining two even numbers results in an even number.",
+      "The total will be even because joining two of the same number results in an even number."
+    ],
+    "correctAnswer": "The total will be even because joining two of the same number results in an even number.",
+    "topic": "Math",
+    "TEKS": "7a",
+    "hint": "",
+    "viewCt": "0",
+    "correctCt": "0",
+    "wrongCt": "0",
+    "score": "2",
+    "subquestion": "If they join their blocks together, which of the following is true?"
+  },
+  {
+    "id": "d4",
+    "question": "What is 10 less than 503?",
+    "answers": [
+      "490",
+      "493",
+      "513",
+      "593"
+    ],
+    "correctAnswer": "493",
+    "topic": "Math",
+    "TEKS": "7b",
+    "hint": "",
+    "viewCt": "0",
+    "correctCt": "0",
+    "wrongCt": "0",
+    "score": "2",
+    "subquestion": ""
+  },
+  {
+    "id": "d5",
+    "question": "Which shape has MORE than 5 vertices?",
+    "answers": [
+      "pyramid",
+      "pac-man",
+      "3D \"L\"",
+      "pentagon"
+    ],
+    "correctAnswer": "3D \"L\"",
+    "topic": "Math",
+    "TEKS": [
+      "8b",
+      "8c"
+    ],
+    "hint": "",
+    "viewCt": "0",
+    "correctCt": "0",
+    "wrongCt": "0",
+    "score": "2",
+    "subquestion": ""
+  },
+  {
+    "id": "d6",
+    "question": "Terrell wants to measure the height of the classroom chalkboard with either pieces of short chalk or long erasers.",
+    "answers": [
+      "Terrell will need the same number of pieces of chalk as erasers to measure the chalkboard.",
+      "Terrell will need more erasers than pieces of chalk because the erasers are longer than the pieces of chalk.",
+      "Terrell will need more pieces of chalk than erasers to measure the chalkboard because the pieces of chalk are shorter than the erasers.",
+      "Terrell will need fewer pieces of chalk than erasers to measure the chalkboard because the pieces of chalk are shorter than the erasers."
+    ],
+    "correctAnswer": "Terrell will need more pieces of chalk than erasers to measure the chalkboard because the pieces of chalk are shorter than the erasers.",
+    "topic": "Math",
+    "TEKS": "9b",
+    "hint": "",
+    "viewCt": "0",
+    "correctCt": "0",
+    "wrongCt": "0",
+    "score": "2",
+    "subquestion": "Which of the statements is true?"
+  },
+  {
+    "id": "d7",
+    "question": "Mr. Smith mopped his tiled kitchen floor over the weekend. It is 6 by 7 tiles long.",
+    "answers": [
+      "13 sqft",
+      "26 square feet",
+      "41 sqft",
+      "42 square feet"
+    ],
+    "correctAnswer": "42 square feet",
+    "topic": "Math",
+    "TEKS": "9f",
+    "hint": "",
+    "viewCt": "0",
+    "correctCt": "0",
+    "wrongCt": "0",
+    "score": "2",
+    "subquestion": "If each tile represents a square foot, what is the area of Mr. Smith’s kitchen floor?"
+  },
+  {
+    "id": "d8",
+    "question": "Mr. Patterson’s students voted on their favorite subject and created a bar graph to display the data: READING X X X X X X X - - -| SOCIAL STUDIES X X X X X X - - - - | SCIENCE X X X X X X X X X - | MATH X X X X X X X - - -",
+    "answers": [
+      "Social Studies and Math have the same amount of votes.",
+      "Math is the most popular subject in Mr. Patterson’s class.",
+      "Reading and Math combined have more votes than Social Studies and Science combined.",
+      "Math and Social Studies combined have fewer votes than Reading and Science combined."
+    ],
+    "correctAnswer": "d",
+    "topic": "Math",
+    "TEKS": [
+      "10b",
+      "10d"
+    ],
+    "hint": "",
+    "viewCt": "0",
+    "correctCt": "0",
+    "wrongCt": "0",
+    "score": "2",
+    "subquestion": "Based on the information in the bar graph, which of the following statements is true?"
+  },
+  {
+    "id": "d9",
+    "question": "Katie has sold these items at the school store: PENCILS o o o o o o o o - | ERASERS o o o o o - - - - | NOTEPADS o o o o o o o - - | RULERS o o o o - - - - -",
+    "answers": [
+      "6",
+      "22",
+      "26",
+      "24"
+    ],
+    "correctAnswer": "26",
+    "topic": "Math",
+    "TEKS": [
+      "10b",
+      "10c",
+      "10d"
+    ],
+    "hint": "",
+    "viewCt": "0",
+    "correctCt": "0",
+    "wrongCt": "0",
+    "score": "2",
+    "subquestion": "If Katie sells two more rulers, how many total items did Katie sell?"
+  },
+  {
+    "id": "da",
+    "question": "Renee’s mom opened a savings account at a bank and deposited $800 in the account. A week later, she withdrew $175 from the account.",
+    "answers": [
+      "$625",
+      "$725",
+      "$775",
+      "$975"
+    ],
+    "correctAnswer": "$625",
+    "topic": "Math",
+    "TEKS": "11c",
+    "hint": "Does \"deposit\" mean to put money in or out of the bank?",
+    "viewCt": "0",
+    "correctCt": "0",
+    "wrongCt": "0",
+    "score": "2",
+    "subquestion": "How much money is in the savings account now?"
+  },
+  {
+    "id": "db",
+    "question": "Emmett needs to borrow $100. Four of his classmates have offered to lend him the money. He will pay them back within one month.",
+    "answers": [
+      "Stanley can loan him $100, and Emmett must pay him $1.00 for each day it takes him to pay Stanley back.",
+      "Gloria can loan him $100, and Emmett must pay her $10 for each day it takes him to pay Gloria back.",
+      "Margaret can loan him $100, and Emmett must pay her an additional $0.50.",
+      "Jason can loan him $200, and Emmett must pay him an additional $0.50."
+    ],
+    "correctAnswer": "Margaret can loan him $100, and Emmett must pay her an additional $0.50.",
+    "topic": "Math",
+    "TEKS": "11d",
+    "hint": "Which deal seems fair both for borrower and lender?",
+    "viewCt": "0",
+    "correctCt": "0",
+    "wrongCt": "0",
+    "score": "2",
+    "subquestion": "Which classmate has offered the most responsible lending choice?"
+  },
+  {
+    "id": "dc",
+    "question": "Which of the following is false about the Navajo code talkers?",
+    "answers": [
+      "They were U.S. Marines who created and used a code to keep military secrets during World War II.",
+      "The Japanese were able to break U.S. codes except the Navajo code talkers'.",
+      "The code was very easy for people who were not natively Navajo to learn.",
+      "This secret code was an important part of U.S. military victories in WWII."
+    ],
+    "correctAnswer": "The code was very easy for people who were not natively Navajo to learn.",
+    "topic": "Social Studies",
+    "TEKS": "13b",
+    "hint": "What would a code be famous for?",
+    "viewCt": "0",
+    "correctCt": "0",
+    "wrongCt": "0",
+    "score": "2",
+    "subquestion": ""
+  },
+  {
+    "id": "dd",
+    "question": "What is Sojourner Truth most remembered for in history?",
+    "answers": [
+      "She defeated a white man to court over selling her son into slavery in violation of state law.",
+      "People from all over the world traveled to hear her speak the truth.",
+      "She wrote a book about women's suffrage, which was illegal during her time.",
+      "She was the first black woman to live inside of the White House."
+    ],
+    "correctAnswer": "She defeated a white man to court over selling her son into slavery in violation of state law.",
+    "topic": "Social Studies",
+    "TEKS": "13b",
+    "hint": "",
+    "viewCt": "0",
+    "correctCt": "0",
+    "wrongCt": "0",
+    "score": "2",
+    "subquestion": ""
   }
 ]
