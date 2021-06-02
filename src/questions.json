@@ -1094,7 +1094,7 @@
       "Reading and Math combined have more votes than Social Studies and Science combined.",
       "Math and Social Studies combined have fewer votes than Reading and Science combined."
     ],
-    "correctAnswer": "d",
+    "correctAnswer": "Math and Social Studies combined have fewer votes than Reading and Science combined.",
     "topic": "Math",
     "TEKS": [
       "10b",
