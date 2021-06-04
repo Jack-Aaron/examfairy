@@ -1,0 +1,404 @@
+[[
+  {
+      "id": "ac",
+      "question": "Which of the following is the correct way to read the word \"trample\"?",
+      "answers": [
+          "tramp-le",
+          "tra-mp-le",
+          "tra-mpel",
+          "tram-pel"
+      ],
+      "correctAnswer": "tram-pel",
+      "topic": "English",
+      "TEKS": "2b",
+      "hint": "",
+      "viewCt": 1,
+      "correctCt": "0",
+      "wrongCt": 3,
+      "score": 0,
+      "subquestion": ""
+  },
+  {
+      "id": "b8",
+      "question": "There is a drought in Tony's community. Which is the BEST action Tony might take to prevent a future problem his community might experience due to the drought?",
+      "answers": [
+          "Watering the lawn twice a week, instead of once a week, so the grass will grow taller",
+          "Taking shorter showers in the morning, so he can conserve water",
+          "Using the dishwasher, instead of washing the dishes by hand",
+          "Taking plastic bottles and metal to the recylcing center, so they can be recycled"
+      ],
+      "correctAnswer": "Using the dishwasher, instead of washing the dishes by hand",
+      "topic": "Science",
+      "TEKS": [
+          "1b",
+          "3a"
+      ],
+      "hint": "",
+      "viewCt": 1,
+      "correctCt": "0",
+      "wrongCt": 2,
+      "score": 0,
+      "subquestion": ""
+  },
+  {
+      "id": "da",
+      "question": "Renee’s mom opened a savings account at a bank and deposited $800 in the account. A week later, she withdrew $175 from the account.",
+      "answers": [
+          "$975",
+          "$625",
+          "$775",
+          "$725"
+      ],
+      "correctAnswer": "$625",
+      "topic": "Math",
+      "TEKS": "11c",
+      "hint": "Does \"deposit\" mean to put money in or out of the bank?",
+      "viewCt": 1,
+      "correctCt": "0",
+      "wrongCt": 1,
+      "score": 1,
+      "subquestion": "How much money is in the savings account now?"
+  },
+  {
+      "id": "d5",
+      "question": "Which shape has MORE than 5 vertices?",
+      "answers": [
+          "3D \"L\"",
+          "pentagon",
+          "pyramid",
+          "pac-man"
+      ],
+      "correctAnswer": "3D \"L\"",
+      "topic": "Math",
+      "TEKS": [
+          "8b",
+          "8c"
+      ],
+      "hint": "",
+      "viewCt": 1,
+      "correctCt": "0",
+      "wrongCt": 1,
+      "score": 1,
+      "subquestion": ""
+  },
+  {
+      "id": "be",
+      "question": "\"Group A: piece of wood, soil, plant\" | \"Group B: toy car, tennis ball, pencil box\"",
+      "answers": [
+          "Group A are objects that are only used by animals, and Group B are objects that are used by only humans.",
+          "Group A are objects that are manmade resources, and Group B are objects that are natural resources.",
+          "Group A are objects that can be reused, and Group B are objects that are made out of wood.",
+          "Group A are objects that are natural resources, and Group B are objects that are manmade resources."
+      ],
+      "correctAnswer": "Group A are objects that are natural resources, and Group B are objects that are manmade resources.",
+      "topic": "Science",
+      "TEKS": "7c",
+      "hint": "",
+      "viewCt": 1,
+      "correctCt": "0",
+      "wrongCt": 1,
+      "score": 1,
+      "subquestion": "What BEST describes how these objects were sorted?"
+  },
+  {
+      "id": "c5",
+      "question": "Which is NOT a reason why people live near bodies of water?",
+      "answers": [
+          "in order to avoid floods",
+          "for recreation",
+          "in order to generate electricity",
+          "for drinking water"
+      ],
+      "correctAnswer": "in order to avoid floods",
+      "topic": "Social Studies",
+      "TEKS": "5a",
+      "hint": "",
+      "viewCt": 1,
+      "correctCt": "0",
+      "wrongCt": 2,
+      "score": 0,
+      "subquestion": ""
+  },
+  {
+      "id": "d9",
+      "question": "Katie has sold these items at the school store: PENCILS o o o o o o o o - | ERASERS o o o o o - - - - | NOTEPADS o o o o o o o - - | RULERS o o o o - - - - -",
+      "answers": [
+          "26",
+          "24",
+          "6",
+          "22"
+      ],
+      "correctAnswer": "26",
+      "topic": "Math",
+      "TEKS": [
+          "10b",
+          "10c",
+          "10d"
+      ],
+      "hint": "",
+      "viewCt": 1,
+      "correctCt": "0",
+      "wrongCt": 2,
+      "score": 0,
+      "subquestion": "If Katie sells two more rulers, how many total items did Katie sell?"
+  },
+  {
+      "id": "b5",
+      "question": "Mia's class wanted to learn about trees. While they were researching, they noticed squirrels running up the side of the trees on their playground.",
+      "answers": [
+          "What items do we use that are made from trees?",
+          "How do trees help animals?",
+          "How can people take care of the trees around them?",
+          "What are trees?"
+      ],
+      "correctAnswer": "How do trees help animals?",
+      "topic": "English",
+      "TEKS": "13a",
+      "hint": "",
+      "viewCt": 1,
+      "correctCt": "0",
+      "wrongCt": 1,
+      "score": 1,
+      "subquestion": "What would be a new question for them to research?"
+  },
+  {
+      "id": "d1",
+      "question": "Which fraction is best represented by this pattern:",
+      "answers": [
+          "One and one-fourth",
+          "Seven-eighths",
+          "One and three-fourths",
+          "One-eighth"
+      ],
+      "correctAnswer": "One and three-fourths",
+      "topic": "Math",
+      "TEKS": [
+          "3a",
+          "3c"
+      ],
+      "hint": "",
+      "viewCt": 1,
+      "correctCt": "0",
+      "wrongCt": 2,
+      "score": 0,
+      "subquestion": "- o o o | o o o o"
+  },
+  {
+      "id": "b4",
+      "question": "(1) I went to the pet store. (2) My mom let me buy a mouse and a fancy cage. (3) I set up the cage after I got home I put the mouse inside. (4) I put some _____ in the cage for the mouse to eat. (5) I named my mouse Fluffy. (6) I love my mouse!",
+      "answers": [
+          "can and captain",
+          "cleat and coin",
+          "chap and city",
+          "cedar and center"
+      ],
+      "correctAnswer": "chap and city",
+      "topic": "English",
+      "TEKS": [
+          "2d",
+          "3a"
+      ],
+      "hint": "",
+      "viewCt": 1,
+      "correctCt": "0",
+      "wrongCt": 4,
+      "score": 0,
+      "subquestion": "Nick left a blank in the story. He wants to add the word CHEESE, but he is not sure how to spell it. Between which two guide words should Nick look for the word in his dictionary?"
+  },
+  {
+      "id": "ad",
+      "question": "Which of the following words would be the best caption for a picture of jumping dolphins?",
+      "answers": [
+          "breath",
+          "beautiful",
+          "brave",
+          "baby"
+      ],
+      "correctAnswer": "beautiful",
+      "topic": "English",
+      "TEKS": "2b",
+      "hint": "",
+      "viewCt": 2,
+      "correctCt": "0",
+      "wrongCt": 3,
+      "score": 0,
+      "subquestion": ""
+  },
+  {
+      "id": "bc",
+      "question": "How does the movement of a marble differ from the movement of a chair on tile when force is applied?",
+      "answers": [
+          "A marble will roll and a chair will slide.",
+          "A marble will spin and a chair will slide.",
+          "A marble will spin and a chair will not move at all.",
+          "A marble will slide and a chair will roll."
+      ],
+      "correctAnswer": "A marble will roll and a chair will slide.",
+      "topic": "Science",
+      "TEKS": "6c",
+      "hint": "",
+      "viewCt": 2,
+      "correctCt": "0",
+      "wrongCt": 4,
+      "score": 0,
+      "subquestion": ""
+  },
+  {
+      "id": "c7",
+      "question": "Jerry produces pencils in his factory. Which word best describes Jerry's role when he purchase pencils in a store.",
+      "answers": [
+          "producer",
+          "buyer",
+          "pencil owner",
+          "consumer"
+      ],
+      "correctAnswer": "consumer",
+      "topic": "Social Studies",
+      "TEKS": [
+          "7a",
+          "7b"
+      ],
+      "hint": "",
+      "viewCt": 2,
+      "correctCt": "0",
+      "wrongCt": 3,
+      "score": 0,
+      "subquestion": ""
+  },
+  {
+      "id": "c3",
+      "question": "What is the significance of the WWII memorial in Washington, D.C.?",
+      "answers": [
+          "It is a way to learn about all the wars in history.",
+          "It is the largest memorial in North America.",
+          "It honors veterans of the military during an important historical period.",
+          "It is a tourist attraction."
+      ],
+      "correctAnswer": "It honors veterans of the military during an important historical period.",
+      "topic": "Social Studies",
+      "TEKS": "1b",
+      "hint": "",
+      "viewCt": 3,
+      "correctCt": "0",
+      "wrongCt": 8,
+      "score": 0,
+      "subquestion": ""
+  },
+  {
+      "id": "b1",
+      "question": "If you were acting out the part of the wolf, what might you do after blowing on the house made of bricks?",
+      "answers": [
+          "stomp your feet because you could not knock down the house",
+          "shrug your shoulders and walk away because you gave up",
+          "take a nap because all that huffing and puffing made you very sleepy",
+          "sit under a tree because you decided to wait for the pig to leave his house"
+      ],
+      "correctAnswer": "stomp your feet because you could not knock down the house",
+      "topic": "English",
+      "TEKS": [
+          "8b",
+          "9c"
+      ],
+      "hint": "",
+      "viewCt": 3,
+      "correctCt": "0",
+      "wrongCt": 7,
+      "score": 0,
+      "subquestion": ""
+  },
+  {
+      "id": "db",
+      "question": "Emmett needs to borrow $100. Four of his classmates have offered to lend him the money. He will pay them back within one month.",
+      "answers": [
+          "Jason can loan him $200, and Emmett must pay him an additional $0.50.",
+          "Gloria can loan him $100, and Emmett must pay her $10 for each day it takes him to pay Gloria back.",
+          "Margaret can loan him $100, and Emmett must pay her an additional $0.50.",
+          "Stanley can loan him $100, and Emmett must pay him $1.00 for each day it takes him to pay Stanley back."
+      ],
+      "correctAnswer": "Margaret can loan him $100, and Emmett must pay her an additional $0.50.",
+      "topic": "Math",
+      "TEKS": "11d",
+      "hint": "Which deal seems fair both for borrower and lender?",
+      "viewCt": 3,
+      "correctCt": "0",
+      "wrongCt": 5,
+      "score": 0,
+      "subquestion": "Which classmate has offered the most responsible lending choice?"
+  },
+  {
+      "id": "b3",
+      "question": "(1) I went to the pet store. (2) My mom let me buy a mouse and a fancy cage. (3) I set up the cage after I got home I put the mouse inside. (4) I put some _____ in the cage for the mouse to eat. (5) I named my mouse Fluffy. (6) I love my mouse!",
+      "answers": [
+          "Change \"after\" to \"before\"",
+          "Add a period after \"home\"",
+          "Change \"inside\" to \"outside\"",
+          "Delete the word \"set\""
+      ],
+      "correctAnswer": "Add a period after \"home\"",
+      "topic": "English",
+      "TEKS": "11d",
+      "hint": "",
+      "viewCt": 3,
+      "correctCt": "0",
+      "wrongCt": 3,
+      "score": 0,
+      "subquestion": "Which of the following is the BEST change to make in sentence 3?"
+  },
+  {
+      "id": "d7",
+      "question": "Mr. Smith mopped his tiled kitchen floor over the weekend. It is 6 by 7 tiles long.",
+      "answers": [
+          "13 sqft",
+          "26 square feet",
+          "41 sqft",
+          "42 square feet"
+      ],
+      "correctAnswer": "42 square feet",
+      "topic": "Math",
+      "TEKS": "9f",
+      "hint": "",
+      "viewCt": 3,
+      "correctCt": "0",
+      "wrongCt": 7,
+      "score": 0,
+      "subquestion": "If each tile represents a square foot, what is the area of Mr. Smith’s kitchen floor?"
+  },
+  {
+      "id": "c2",
+      "question": "Who is Irma Rangel?",
+      "answers": [
+          "The first woman to serve in Congress.",
+          "An important Mexican American state legislator.",
+          "The first African American judge.",
+          "An important woman educator."
+      ],
+      "correctAnswer": "An important Mexican American state legislator.",
+      "topic": "Social Studies",
+      "TEKS": "2a",
+      "hint": "",
+      "viewCt": 5,
+      "correctCt": "0",
+      "wrongCt": 9,
+      "score": 0,
+      "subquestion": ""
+  },
+  {
+      "id": "dd",
+      "question": "What is Sojourner Truth most remembered for in history?",
+      "answers": [
+          "She defeated a white man to court over selling her son into slavery in violation of state law.",
+          "People from all over the world traveled to hear her speak the truth.",
+          "She wrote a book about women's suffrage, which was illegal during her time.",
+          "She was the first black woman to live inside of the White House."
+      ],
+      "correctAnswer": "She defeated a white man to court over selling her son into slavery in violation of state law.",
+      "topic": "Social Studies",
+      "TEKS": "13b",
+      "hint": "",
+      "viewCt": 5,
+      "correctCt": "0",
+      "wrongCt": 11,
+      "score": 0,
+      "subquestion": ""
+  }
+]]

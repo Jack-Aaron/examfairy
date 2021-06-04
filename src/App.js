@@ -5,7 +5,7 @@ import Container from 'react-bootstrap/Container'
 import Question from './components/Question';
 import Header from './components/Header';
 import Quote from './components/Quote';
-import QUESTIONS from './questions.json';
+import QUESTIONS from './review_questions.json';
 import shuffle from './shuffle';
 import './App.css';
 
