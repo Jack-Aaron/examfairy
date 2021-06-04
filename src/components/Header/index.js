@@ -9,8 +9,8 @@ const Header = ({ wrongAnswer, questionsState }) => {
     <div>
       <Jumbotron>
         <h1 className="display-1 up">
-          <span className={wrongAnswer ? 'down' : 'up'}>{63 - count + 1}</span>
-          {' | ' + 63}</h1>
+          <span className={wrongAnswer ? 'down' : 'up'}>{20 - count + 1}</span>
+          {' | ' + 20}</h1>
         <br /><br /><br />
       </Jumbotron>
     </div>
